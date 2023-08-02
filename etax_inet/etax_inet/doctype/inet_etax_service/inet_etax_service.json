@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-01 14:52:31.065523",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "seller_name",
+  "seller_tax_id",
+  "seller_branch_id",
+  "seller_service_user",
+  "column_break_y6jpa",
+  "authorization_code",
+  "api_key",
+  "user_code",
+  "access_key",
+  "service_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "seller_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seller Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seller_tax_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seller Tax ID",
+   "length": 13,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "00000",
+   "fieldname": "seller_branch_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seller Branch ID",
+   "length": 5,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "seller_service_user",
+   "fieldtype": "Link",
+   "label": "Seller Service User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key",
+   "length": 500,
+   "reqd": 1
+  },
+  {
+   "fieldname": "user_code",
+   "fieldtype": "Data",
+   "label": "User Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "access_key",
+   "fieldtype": "Data",
+   "label": "Access Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "authorization_code",
+   "fieldtype": "Data",
+   "label": "Authorization Code",
+   "length": 500,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_y6jpa",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-01 14:57:52.488628",
+ "modified_by": "Administrator",
+ "module": "ETAX INET",
+ "name": "INET ETax Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

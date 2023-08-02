@@ -1,0 +1,517 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-31 15:49:00.540922",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "l01_line_id",
+  "section_break_z6uzv",
+  "l02_product_id",
+  "l03_product_name",
+  "column_break_awimh",
+  "l04_product_desc",
+  "l05_product_batch_id",
+  "l06_product_expire_dtm",
+  "section_break_jkr0u",
+  "l07_product_class_code",
+  "l08_product_class_name",
+  "column_break_vuqrv",
+  "l09_product_origin_country_id",
+  "section_break_nqspw",
+  "l10_product_charge_amount",
+  "column_break_kmowy",
+  "l11_product_charge_currency_code",
+  "section_break_dyvjj",
+  "l12_product_allowance_charge_ind",
+  "l13_product_allowance_actual_amount",
+  "l14_product_allowance_actual_currency_code",
+  "column_break_djcbt",
+  "l15_product_allowance_reason_code",
+  "l16_product_allowance_reason",
+  "section_break_5lvk4",
+  "l17_product_quantity",
+  "column_break_d8q3t",
+  "l18_product_unit_code",
+  "l19_product_quantity_per_unit",
+  "tax__price_total_section",
+  "l20_line_tax_type_code",
+  "l21_line_tax_cal_rate",
+  "l22_line_basis_amount",
+  "l23_line_basis_currency_code",
+  "l24_line_tax_cal_amount",
+  "l25_line_tax_cal_currency_code",
+  "column_break_ixlhc",
+  "l26_line_allowance_charge_ind",
+  "l27_line_allowance_actual_amount",
+  "l28_line_allowance_actual_currency_code",
+  "l29_line_allowance_reason_code",
+  "l30_line_allowance_reason",
+  "amount_section",
+  "l31_line_tax_total_amount",
+  "l32_line_tax_total_currency_code",
+  "l33_line_net_total_amount",
+  "l34_line_net_total_currency_code",
+  "l35_line_net_include_tax_total_amount",
+  "l36_line_net_include_tax_total_currency_code",
+  "section_break_6gcwd",
+  "l37_product_remark1",
+  "l38_product_remark2",
+  "l39_product_remark3",
+  "l40_product_remark4",
+  "l41_product_remark5",
+  "column_break_bq1uk",
+  "l42_product_remark6",
+  "l43_product_remark7",
+  "l44_product_remark8",
+  "l45_product_remark9",
+  "l46_product_remark10"
+ ],
+ "fields": [
+  {
+   "description": "\u0e25\u0e33\u0e14\u0e31\u0e1a\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23",
+   "fieldname": "l01_line_id",
+   "fieldtype": "Data",
+   "label": "L01-LINE_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l02_product_id",
+   "fieldtype": "Data",
+   "label": "L02-PRODUCT_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l03_product_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "L03-PRODUCT_NAME",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e32\u0e22\u0e25\u0e30\u0e40\u0e2d\u0e35\u0e22\u0e14\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l04_product_desc",
+   "fieldtype": "Data",
+   "label": "L04-PRODUCT_DESC",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e04\u0e23\u0e31\u0e49\u0e07\u0e17\u0e35\u0e48\u0e1c\u0e25\u0e34\u0e15",
+   "fieldname": "l05_product_batch_id",
+   "fieldtype": "Data",
+   "label": "L05-PRODUCT_BATCH_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e27\u0e31\u0e19\u0e2b\u0e21\u0e14\u0e2d\u0e32\u0e22\u0e38",
+   "fieldname": "l06_product_expire_dtm",
+   "fieldtype": "Datetime",
+   "label": "L06-PRODUCT_EXPIRE_DTM",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l07_product_class_code",
+   "fieldtype": "Data",
+   "label": "L07-PRODUCT_CLASS_CODE",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l08_product_class_name",
+   "fieldtype": "Data",
+   "label": "L08-PRODUCT_CLASS_NAME",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e01\u0e33\u0e40\u0e19\u0e34\u0e14",
+   "fieldname": "l09_product_origin_country_id",
+   "fieldtype": "Data",
+   "label": "L09-PRODUCT_ORIGIN_COUNTRY_ID",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e32\u0e04\u0e32\u0e15\u0e48\u0e2d\u0e2b\u0e19\u0e48\u0e27\u0e22",
+   "fieldname": "l10_product_charge_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "L10-PRODUCT_CHARGE_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e23\u0e32\u0e04\u0e32\u0e15\u0e48\u0e2d\u0e2b\u0e19\u0e48\u0e27\u0e22)",
+   "fieldname": "l11_product_charge_currency_code",
+   "fieldtype": "Data",
+   "label": "L11-PRODUCT_CHARGE_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e15\u0e31\u0e27\u0e1a\u0e2d\u0e01\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l12_product_allowance_charge_ind",
+   "fieldtype": "Data",
+   "label": "L12-PRODUCT_ALLOWANCE_CHARGE_IND",
+   "length": 5,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l13_product_allowance_actual_amount",
+   "fieldtype": "Float",
+   "label": "L13-PRODUCT_ALLOWANCE_ACTUAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21)",
+   "fieldname": "l14_product_allowance_actual_currency_code",
+   "fieldtype": "Data",
+   "label": "L14-PRODUCT_ALLOWANCE_ACTUAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e40\u0e2b\u0e15\u0e38\u0e1c\u0e25\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e34\u0e14\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l15_product_allowance_reason_code",
+   "fieldtype": "Data",
+   "label": "L15-PRODUCT_ALLOWANCE_REASON_CODE",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e2b\u0e15\u0e38\u0e1c\u0e25\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e34\u0e14\u0e2a\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l16_product_allowance_reason",
+   "fieldtype": "Data",
+   "label": "L16-PRODUCT_ALLOWANCE_REASON",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l17_product_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "L17-PRODUCT_QUANTITY",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2b\u0e19\u0e48\u0e27\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "l18_product_unit_code",
+   "fieldtype": "Data",
+   "label": "L18-PRODUCT_UNIT_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e02\u0e19\u0e32\u0e14\u0e1a\u0e23\u0e23\u0e08\u0e38\u0e15\u0e48\u0e2d\u0e2b\u0e19\u0e48\u0e27\u0e22\u0e02\u0e32\u0e22",
+   "fieldname": "l19_product_quantity_per_unit",
+   "fieldtype": "Float",
+   "label": "L19-PRODUCT_QUANTITY_PER_UNIT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "l20_line_tax_type_code",
+   "fieldtype": "Select",
+   "label": "L20-LINE_TAX_TYPE_CODE",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nVAT\nFRE"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "l21_line_tax_cal_rate",
+   "fieldtype": "Float",
+   "label": "L21-LINE_TAX_CAL_RATE",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "l22_line_basis_amount",
+   "fieldtype": "Float",
+   "label": "L22-LINE_BASIS_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23)",
+   "fieldname": "l23_line_basis_currency_code",
+   "fieldtype": "Data",
+   "label": "L23-LINE_BASIS_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e21",
+   "fieldname": "l24_line_tax_cal_amount",
+   "fieldtype": "Float",
+   "label": "L24-LINE_TAX_CAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e21)",
+   "fieldname": "l25_line_tax_cal_currency_code",
+   "fieldtype": "Data",
+   "label": "L25-LINE_TAX_CAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e15\u0e31\u0e27\u0e1a\u0e2d\u0e01\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l26_line_allowance_charge_ind",
+   "fieldtype": "Data",
+   "label": "L26-LINE_ALLOWANCE_CHARGE_IND",
+   "length": 5,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l27_line_allowance_actual_amount",
+   "fieldtype": "Float",
+   "label": "L27-LINE_ALLOWANCE_ACTUAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l28_line_allowance_actual_currency_code",
+   "fieldtype": "Data",
+   "label": "L28-LINE_ALLOWANCE_ACTUAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e40\u0e2b\u0e15\u0e38\u0e1c\u0e25\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e34\u0e14\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l29_line_allowance_reason_code",
+   "fieldtype": "Data",
+   "label": "L29-LINE_ALLOWANCE_REASON_CODE",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e2b\u0e15\u0e38\u0e1c\u0e25\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e34\u0e14\u0e2a\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "l30_line_allowance_reason",
+   "fieldtype": "Data",
+   "label": "L30-LINE_ALLOWANCE_REASON",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e21",
+   "fieldname": "l31_line_tax_total_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "L31-LINE_TAX_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e21)",
+   "fieldname": "l32_line_tax_total_currency_code",
+   "fieldtype": "Data",
+   "label": "L32-LINE_TAX_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e23\u0e27\u0e21\u0e01\u0e48\u0e2d\u0e19\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "l33_line_net_total_amount",
+   "fieldtype": "Float",
+   "label": "L33-LINE_NET_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e08\u0e4d\u0e32\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e23\u0e27\u0e21\u0e01\u0e48\u0e2d\u0e19\u0e20\u0e32\u0e29\u0e35)",
+   "fieldname": "l34_line_net_total_currency_code",
+   "fieldtype": "Data",
+   "label": "L34-LINE_NET_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e23\u0e27\u0e21",
+   "fieldname": "l35_line_net_include_tax_total_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "L35-LINE_NET_INCLUDE_TAX_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19 (\u0e08\u0e4d\u0e32\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e23\u0e27\u0e21)",
+   "fieldname": "l36_line_net_include_tax_total_currency_code",
+   "fieldtype": "Data",
+   "label": "L36-LINE_NET_INCLUDE_TAX_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 1",
+   "fieldname": "l37_product_remark1",
+   "fieldtype": "Small Text",
+   "label": "L37-PRODUCT_REMARK1",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 2",
+   "fieldname": "l38_product_remark2",
+   "fieldtype": "Small Text",
+   "label": "L38-PRODUCT_REMARK2",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 3",
+   "fieldname": "l39_product_remark3",
+   "fieldtype": "Small Text",
+   "label": "L39-PRODUCT_REMARK3",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 4",
+   "fieldname": "l40_product_remark4",
+   "fieldtype": "Small Text",
+   "label": "L40-PRODUCT_REMARK4",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 5",
+   "fieldname": "l41_product_remark5",
+   "fieldtype": "Small Text",
+   "label": "L41-PRODUCT_REMARK5",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 6",
+   "fieldname": "l42_product_remark6",
+   "fieldtype": "Small Text",
+   "label": "L42-PRODUCT_REMARK6",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 7",
+   "fieldname": "l43_product_remark7",
+   "fieldtype": "Small Text",
+   "label": "L43-PRODUCT_REMARK7",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 8",
+   "fieldname": "l44_product_remark8",
+   "fieldtype": "Small Text",
+   "label": "L44-PRODUCT_REMARK8",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 9",
+   "fieldname": "l45_product_remark9",
+   "fieldtype": "Small Text",
+   "label": "L45-PRODUCT_REMARK9",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32 10",
+   "fieldname": "l46_product_remark10",
+   "fieldtype": "Small Text",
+   "label": "L46-PRODUCT_REMARK10",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "fieldname": "section_break_z6uzv",
+   "fieldtype": "Section Break",
+   "label": "Product"
+  },
+  {
+   "fieldname": "column_break_awimh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jkr0u",
+   "fieldtype": "Section Break",
+   "label": "Product Group"
+  },
+  {
+   "fieldname": "column_break_vuqrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nqspw",
+   "fieldtype": "Section Break",
+   "label": "Price"
+  },
+  {
+   "fieldname": "column_break_kmowy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_dyvjj",
+   "fieldtype": "Section Break",
+   "label": "Allowance / Charge"
+  },
+  {
+   "fieldname": "column_break_djcbt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5lvk4",
+   "fieldtype": "Section Break",
+   "label": "Quantity"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_6gcwd",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_bq1uk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ixlhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_d8q3t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax__price_total_section",
+   "fieldtype": "Section Break",
+   "label": "Tax"
+  },
+  {
+   "fieldname": "amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-01 23:05:47.304077",
+ "modified_by": "Administrator",
+ "module": "ETAX INET",
+ "name": "INET ETax Document Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

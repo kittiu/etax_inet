@@ -1,0 +1,1838 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-31 15:47:38.966594",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "currency",
+  "file_control_section",
+  "c01_seller_tax_id",
+  "c02_seller_branch_id",
+  "column_break_ng5yq",
+  "c03_file_name",
+  "file_trailer_section",
+  "t01_total_document_count",
+  "section_break_n0c0m",
+  "h01_document_type_code",
+  "h02_document_name",
+  "h03_document_id",
+  "h04_document_issue_dtm",
+  "h05_create_purpose_code",
+  "h06_create_purpose",
+  "h07_additional_ref_assign_id",
+  "h08_additional_ref_issue_dtm",
+  "h09_additional_ref_type_code",
+  "h10_additional_ref_document_name",
+  "h11_delivery_type_code",
+  "h12_buyer_order_assign_id",
+  "h13_buyer_order_issue_dtm",
+  "h14_buyer_order_ref_type_code",
+  "column_break_hguez",
+  "h15_document_remark",
+  "h16_voucher_no",
+  "h17_seller_contact_person_name",
+  "h18_seller_contact_department_name",
+  "h19_seller_contact_uriid",
+  "h20_seller_contact_phone_no",
+  "h21_flex_field",
+  "h22_seller_branch_id",
+  "h23_source_system",
+  "h24_encrypt_password",
+  "h25_pdf_template_id",
+  "h26_send_mail_ind",
+  "h27_pdf_name",
+  "section_break_xlntf",
+  "b01_buyer_id",
+  "b02_buyer_name",
+  "column_break_llh3o",
+  "b03_buyer_tax_id_type",
+  "b04_buyer_tax_id",
+  "b05_buyer_branch_id",
+  "buyer_contact_section",
+  "b06_buyer_contact_person_name",
+  "b07_buyer_contact_department_name",
+  "column_break_ckism",
+  "b08_buyer_uriid",
+  "b09_buyer_contact_phone_no",
+  "buyer_address_section",
+  "b10_buyer_post_code",
+  "b11_buyer_building_name",
+  "b12_buyer_building_no",
+  "b13_buyer_address_line1",
+  "b14_buyer_address_line2",
+  "b15_buyer_address_line3",
+  "b16_buyer_address_line4",
+  "b17_buyer_address_line5",
+  "column_break_ypnpd",
+  "b18_buyer_street_name",
+  "b19_buyer_city_sub_div_id",
+  "b20_buyer_city_sub_div_name",
+  "b21_buyer_city_id",
+  "b22_buyer_city_name",
+  "b23_buyer_country_sub_div_id",
+  "b24_buyer_country_sub_div_name",
+  "b25_buyer_country_id",
+  "section_break_2nbmy",
+  "o01_ship_to_id",
+  "o02_ship_to_name",
+  "column_break_mz4ri",
+  "o03_ship_to_tax_id_type",
+  "o04_ship_to_tax_id",
+  "o05_ship_to_branch_id",
+  "ship_to_contact_section",
+  "o06_ship_to_contact_person_name",
+  "o07_ship_to_contact_department_name",
+  "column_break_pgm8z",
+  "o08_ship_to_uriid",
+  "o09_ship_to_phone_no",
+  "ship_to_address_section",
+  "o10_ship_to_post_code",
+  "o11_ship_to_building_name",
+  "o12_ship_to_building_no",
+  "o13_ship_to_address_line1",
+  "o14_ship_to_address_line2",
+  "o15_ship_to_address_line3",
+  "o16_ship_to_address_line4",
+  "o17_ship_to_address_line5",
+  "column_break_vffau",
+  "o18_ship_to_street_name",
+  "o19_ship_to_city_sub_div_id",
+  "o20_ship_to_city_sub_div_name",
+  "o21_ship_to_city_id",
+  "o22_ship_to_city_name",
+  "o23_ship_to_country_sub_div_id",
+  "o24_ship_to_country_sub_div_name",
+  "o25_ship_to_country_id",
+  "section_break_81jyu",
+  "line_item_information",
+  "section_break_bu8cb",
+  "f01_line_total_count",
+  "column_break_gl2by",
+  "f02_delivery_occur_dtm",
+  "column_break_0vtff",
+  "f03_invoice_currency_code",
+  "tax_type_1_section",
+  "f04_tax_type_code1",
+  "f05_tax_cal_rate1",
+  "f06_basis_amount1",
+  "column_break_iy0mb",
+  "f07_basis_currency_code1",
+  "f08_tax_cal_amount1",
+  "f09_tax_cal_currency_code1",
+  "tax_type_2_section",
+  "f10_tax_type_code2",
+  "f11_tax_cal_rate2",
+  "f12_basis_amount2",
+  "column_break_b5o6i",
+  "f13_basis_currency_code2",
+  "f14_tax_cal_amount2",
+  "f15_tax_cal_currency_code2",
+  "tax_type_3_section",
+  "f16_tax_type_code3",
+  "f17_tax_cal_rate3",
+  "f18_basis_amount3",
+  "column_break_57fz0",
+  "f19_basis_currency_code3",
+  "f20_tax_cal_amount3",
+  "f21_tax_cal_currency_code3",
+  "tax_type_4_section",
+  "f22_tax_type_code4",
+  "f23_tax_cal_rate4",
+  "f24_basis_amount4",
+  "column_break_48eny",
+  "f25_basis_currency_code4",
+  "f26_tax_cal_amount4",
+  "f27_tax_cal_currency_code4",
+  "allowance_and_charge_section",
+  "f28_allowance_charge_ind",
+  "f29_allowance_actual_amount",
+  "f30_allowance_actual_currency_code",
+  "f31_allowance_reason_code",
+  "f32_allowance_reason",
+  "column_break_vldtq",
+  "f33_payment_type_code",
+  "f34_payment_description",
+  "f35_payment_due_dtm",
+  "section_break_jbbhr",
+  "f36_original_total_amount",
+  "f37_original_total_currency_code",
+  "f38_line_total_amount",
+  "f39_line_total_currency_code",
+  "column_break_zisjp",
+  "f40_adjusted_information_amount",
+  "f41_adjusted_information_currency_code",
+  "f42_allowance_total_amount",
+  "f43_allowance_total_currency_code",
+  "f44_charge_total_amount",
+  "f45_charge_total_currency_code",
+  "overall_tax_section",
+  "f46_tax_basis_total_amount",
+  "f47_tax_basis_total_currency_code",
+  "f48_tax_total_amount",
+  "f49_tax_total_currency_code",
+  "column_break_kh5v1",
+  "f50_grand_total_amount",
+  "f51_grand_total_currency_code",
+  "f52_term_payment",
+  "witholding_type_1_section",
+  "f53_withholdingtax_type1",
+  "f54_withholdingtax_description1",
+  "column_break_ezdbr",
+  "f55_withholdingtax_rate1",
+  "f56_withholdingtax_basis_amount1",
+  "f57_withholdingtax_tax_amount1",
+  "withholding_type_2_section",
+  "f58_withholdingtax_type2",
+  "f59_withholdingtax_description2",
+  "column_break_kygyv",
+  "f60_withholdingtax_rate2",
+  "f61_withholdingtax_basis_amount2",
+  "f62_withholdingtax_tax_amount2",
+  "withholding_type_3",
+  "f63_withholdingtax_type3",
+  "f64_withholdingtax_description3",
+  "column_break_zn8lf",
+  "f65_withholdingtax_rate3",
+  "f66_withholdingtax_basis_amount3",
+  "f67_withholdingtax_tax_amount3",
+  "overall_withholding_section",
+  "f68_withholdingtax_total_amount",
+  "column_break_lmfs8",
+  "f69_actual_payment_total_amount",
+  "document_remarks_section",
+  "f70_document_remark1",
+  "f71_document_remark2",
+  "f72_document_remark3",
+  "f73_document_remark4",
+  "f74_document_remark5",
+  "column_break_ngort",
+  "f75_document_remark6",
+  "f76_document_remark7",
+  "f77_document_remark8",
+  "f78_document_remark9",
+  "f79_document_remark10",
+  "server_response_tab",
+  "transaction_code",
+  "error_code",
+  "column_break_wzezw",
+  "status",
+  "amended_from",
+  "section_break_owbmn",
+  "xml_url",
+  "column_break_zgy8t",
+  "pdf_url",
+  "section_break_dwxaw",
+  "error_message"
+ ],
+ "fields": [
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e1b\u0e23\u0e30\u0e08\u0e4d\u0e32\u0e15\u0e31\u0e27\u0e1c\u0e39\u0e49\u0e40\u0e2a\u0e35\u0e22\u0e20\u0e32\u0e29\u0e35\u0e2d\u0e32\u0e01\u0e23\u0e02\u0e2d\u0e07\u0e1c\u0e39\u0e49\u0e02\u0e32\u0e22",
+   "fieldname": "c01_seller_tax_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C01-SELLER_TAX_ID",
+   "length": 13,
+   "max_height": "30px",
+   "reqd": 1
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e2a\u0e32\u0e02\u0e32\u0e2a\u0e16\u0e32\u0e19\u0e1b\u0e23\u0e30\u0e01\u0e2d\u0e1a\u0e01\u0e32\u0e23",
+   "fieldname": "c02_seller_branch_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C02-SELLER_BRANCH_ID",
+   "length": 5,
+   "max_height": "30px",
+   "reqd": 1
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e44\u0e1f\u0e25\u0e4c",
+   "fieldname": "c03_file_name",
+   "fieldtype": "Data",
+   "label": "C03-FILE_NAME",
+   "length": 50,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h01_document_type_code",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "H01-DOCUMENT_TYPE_CODE",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\n380\n388\nT02\nT03\nT04\nT05\nT01\n80\n81",
+   "reqd": 1
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h02_document_name",
+   "fieldtype": "Data",
+   "label": "H02-DOCUMENT_NAME",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h03_document_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "H03-DOCUMENT_ID",
+   "length": 35,
+   "max_height": "30px",
+   "reqd": 1
+  },
+  {
+   "description": "\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e25\u0e07\u0e27\u0e31\u0e19\u0e17\u0e35\u0e48",
+   "fieldname": "h04_document_issue_dtm",
+   "fieldtype": "Datetime",
+   "label": "H04-DOCUMENT_ISSUE_DTM",
+   "max_height": "30px",
+   "reqd": 1
+  },
+  {
+   "description": "\u0e2a\u0e32\u0e40\u0e2b\u0e15\u0e38\u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h05_create_purpose_code",
+   "fieldtype": "Select",
+   "label": "H05-CREATE_PURPOSE_CODE",
+   "length": 6,
+   "max_height": "30px",
+   "options": "\nTIVC01\nTIVC02\nTIVC99\nDBNG01\nDBNG02\nDBNG99\nDBNS01\nDBNS02\nDBNS99\nCDNG01\nCDNG02\nCDNG03\nCDNG04\nCDNG05\nCDNG99\nCDNS01\nCDNS02\nCDNS03\nCDNS04\nCDNS99\nRCTC01\nRCTC02\nRCTC03\nRCTC04\nRCTC99\nRCTC02\nRCTC03"
+  },
+  {
+   "description": "\u0e2a\u0e32\u0e40\u0e2b\u0e15\u0e38\u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h06_create_purpose",
+   "fieldtype": "Data",
+   "label": "H06-CREATE_PURPOSE",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07",
+   "fieldname": "h07_additional_ref_assign_id",
+   "fieldtype": "Data",
+   "label": "H07-ADDITIONAL_REF_ASSIGN_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07\u0e25\u0e07\u0e27\u0e31\u0e19\u0e17\u0e35\u0e48",
+   "fieldname": "h08_additional_ref_issue_dtm",
+   "fieldtype": "Datetime",
+   "label": "H08-ADDITIONAL_REF_ISSUE_DTM",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07",
+   "fieldname": "h09_additional_ref_type_code",
+   "fieldtype": "Select",
+   "label": "H09-ADDITIONAL_REF_TYPE_CODE",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\n388\nT01\nT02\nT03\nT04"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07",
+   "fieldname": "h10_additional_ref_document_name",
+   "fieldtype": "Data",
+   "label": "H10-ADDITIONAL_REF_DOCUMENT_NAME",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e07\u0e37\u0e48\u0e2d\u0e19\u0e44\u0e02\u0e01\u0e32\u0e23\u0e2a\u0e48\u0e07\u0e02\u0e2d\u0e07",
+   "fieldname": "h11_delivery_type_code",
+   "fieldtype": "Select",
+   "label": "H11-DELIVERY_TYPE_CODE",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nFOB\nCIF\nFAS\nCFR\nCIP\nCPT\nFCA\nEXW\nDAT\nDAP\nDDP"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48\u0e43\u0e1a\u0e2a\u0e31\u0e48\u0e07\u0e0b\u0e37\u0e49\u0e2d",
+   "fieldname": "h12_buyer_order_assign_id",
+   "fieldtype": "Data",
+   "label": "H12-BUYER_ORDER_ASSIGN_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e27\u0e31\u0e19\u0e40\u0e14\u0e37\u0e2d\u0e19\u0e1b\u0e35 \u0e17\u0e35\u0e48\u0e2d\u0e2d\u0e01\u0e43\u0e1a\u0e2a\u0e31\u0e48\u0e07\u0e0b\u0e37\u0e49\u0e2d",
+   "fieldname": "h13_buyer_order_issue_dtm",
+   "fieldtype": "Datetime",
+   "label": "H13-BUYER_ORDER_ISSUE_DTM",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e2d\u0e49\u0e32\u0e07\u0e2d\u0e34\u0e07\u0e01\u0e32\u0e23\u0e2a\u0e31\u0e07\u0e0b\u0e37\u0e49\u0e2d",
+   "fieldname": "h14_buyer_order_ref_type_code",
+   "fieldtype": "Select",
+   "label": "H14-BUYER_ORDER_REF_TYPE_CODE",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nIV\nLC\nLS\nON\nSE\nALT\nDL\nCD\nZZZ"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h15_document_remark",
+   "fieldtype": "Data",
+   "label": "H15-DOCUMENT_REMARK",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e43\u0e1a\u0e2a\u0e4d\u0e32\u0e04\u0e31\u0e0d\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "h16_voucher_no",
+   "fieldtype": "Data",
+   "label": "H16-VOUCHER_NO",
+   "length": 50,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d",
+   "fieldname": "h17_seller_contact_person_name",
+   "fieldtype": "Data",
+   "label": "H17-SELLER_CONTACT_PERSON_NAME",
+   "length": 140,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e41\u0e1c\u0e19\u0e01",
+   "fieldname": "h18_seller_contact_department_name",
+   "fieldtype": "Data",
+   "label": "H18-SELLER_CONTACT_DEPARTMENT_NAME",
+   "length": 140,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e35\u0e40\u0e21\u0e25\u0e4c",
+   "fieldname": "h19_seller_contact_uriid",
+   "fieldtype": "Data",
+   "label": "H19-SELLER_CONTACT_URIID",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e1a\u0e2d\u0e23\u0e4c\u0e42\u0e17\u0e23\u0e28\u0e31\u0e1e\u0e17\u0e4c",
+   "fieldname": "h20_seller_contact_phone_no",
+   "fieldtype": "Data",
+   "label": "H20-SELLER_CONTACT_PHONE_NO",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "Flex Field",
+   "fieldname": "h21_flex_field",
+   "fieldtype": "Small Text",
+   "label": "H21-FLEX_FIELD",
+   "length": 4000
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e2a\u0e32\u0e02\u0e32\u0e2a\u0e16\u0e32\u0e19\u0e1b\u0e23\u0e30\u0e01\u0e2d\u0e1a\u0e01\u0e32\u0e23",
+   "fieldname": "h22_seller_branch_id",
+   "fieldtype": "Data",
+   "label": "H22-SELLER_BRANCH_ID",
+   "length": 5,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e30\u0e1a\u0e1a\u0e17\u0e35\u0e48\u0e2d\u0e2d\u0e01\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23",
+   "fieldname": "h23_source_system",
+   "fieldtype": "Data",
+   "label": "H23-SOURCE_SYSTEM",
+   "length": 100,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e4d\u0e32\u0e2b\u0e23\u0e31\u0e1a encrypt \u0e44\u0e1f\u0e25\u0e4c PDF",
+   "fieldname": "h24_encrypt_password",
+   "fieldtype": "Data",
+   "label": "H24-ENCRYPT_PASSWORD",
+   "length": 50,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a template \u0e2a\u0e23\u0e49\u0e32\u0e07\u0e44\u0e1f\u0e25\u0e4c PDF",
+   "fieldname": "h25_pdf_template_id",
+   "fieldtype": "Data",
+   "label": "H25-PDF_TEMPLATE_ID",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e07\u0e37\u0e2d\u0e19\u0e44\u0e02\u0e01\u0e32\u0e23\u0e2a\u0e48\u0e07\u0e2d\u0e35\u0e40\u0e21\u0e25",
+   "fieldname": "h26_send_mail_ind",
+   "fieldtype": "Select",
+   "label": "H26-SEND_MAIL_IND",
+   "length": 1,
+   "max_height": "30px",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "h27_pdf_name",
+   "fieldtype": "Data",
+   "label": "H27-PDF_NAME",
+   "length": 50,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1c\u0e39\u0e49\u0e0b\u0e37\u0e49\u0e2d",
+   "fieldname": "b01_buyer_id",
+   "fieldtype": "Data",
+   "label": "B01-BUYER_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e0b\u0e37\u0e49\u0e2d",
+   "fieldname": "b02_buyer_name",
+   "fieldtype": "Data",
+   "label": "B02-BUYER_NAME",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e1c\u0e39\u0e49\u0e40\u0e2a\u0e35\u0e22\u0e20\u0e32\u0e29\u0e35\u0e2d\u0e32\u0e01\u0e23",
+   "fieldname": "b03_buyer_tax_id_type",
+   "fieldtype": "Select",
+   "label": "B03-BUYER_TAX_ID_TYPE",
+   "length": 4,
+   "max_height": "30px",
+   "options": "\nTXID\nNIDN\nCCPT\nOTHR"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e1b\u0e23\u0e30\u0e08\u0e4d\u0e32\u0e15\u0e31\u0e27\u0e1c\u0e39\u0e49\u0e40\u0e2a\u0e35\u0e22\u0e20\u0e32\u0e29\u0e35\u0e2d\u0e32\u0e01\u0e23",
+   "fieldname": "b04_buyer_tax_id",
+   "fieldtype": "Data",
+   "label": "B04-BUYER_TAX_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48\u0e2a\u0e32\u0e02\u0e32",
+   "fieldname": "b05_buyer_branch_id",
+   "fieldtype": "Data",
+   "label": "B05-BUYER_BRANCH_ID",
+   "length": 5,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d",
+   "fieldname": "b06_buyer_contact_person_name",
+   "fieldtype": "Data",
+   "label": "B06-BUYER_CONTACT_PERSON_NAME",
+   "length": 140,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e41\u0e1c\u0e19\u0e01",
+   "fieldname": "b07_buyer_contact_department_name",
+   "fieldtype": "Data",
+   "label": "B07-BUYER_CONTACT_DEPARTMENT_NAME",
+   "length": 140,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e35\u0e40\u0e21\u0e25\u0e4c",
+   "fieldname": "b08_buyer_uriid",
+   "fieldtype": "Data",
+   "label": "B08-BUYER_URIID",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e1a\u0e2d\u0e23\u0e4c\u0e42\u0e17\u0e23\u0e28\u0e31\u0e1e\u0e17\u0e4c",
+   "fieldname": "b09_buyer_contact_phone_no",
+   "fieldtype": "Data",
+   "label": "B09-BUYER_CONTACT_PHONE_NO",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e44\u0e1b\u0e23\u0e29\u0e13\u0e35\u0e22\u0e4c",
+   "fieldname": "b10_buyer_post_code",
+   "fieldtype": "Data",
+   "label": "B10-BUYER_POST_CODE",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e2d\u0e32\u0e04\u0e32\u0e23",
+   "fieldname": "b11_buyer_building_name",
+   "fieldtype": "Data",
+   "label": "B11-BUYER_BUILDING_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1a\u0e49\u0e32\u0e19\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48",
+   "fieldname": "b12_buyer_building_no",
+   "fieldtype": "Data",
+   "label": "B12-BUYER_BUILDING_NO",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e17\u0e35\u0e48\u0e2d\u0e22\u0e39\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e17\u0e35\u0e48 1",
+   "fieldname": "b13_buyer_address_line1",
+   "fieldtype": "Data",
+   "label": "B13-BUYER_ADDRESS_LINE1",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e17\u0e35\u0e48\u0e2d\u0e22\u0e39\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e17\u0e35\u0e48 2",
+   "fieldname": "b14_buyer_address_line2",
+   "fieldtype": "Data",
+   "label": "B14-BUYER_ADDRESS_LINE2",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0b\u0e2d\u0e22",
+   "fieldname": "b15_buyer_address_line3",
+   "fieldtype": "Data",
+   "label": "B15-BUYER_ADDRESS_LINE3",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e39\u0e48\u0e1a\u0e49\u0e32\u0e19",
+   "fieldname": "b16_buyer_address_line4",
+   "fieldtype": "Data",
+   "label": "B16-BUYER_ADDRESS_LINE4",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e39\u0e48\u0e17\u0e35\u0e48",
+   "fieldname": "b17_buyer_address_line5",
+   "fieldtype": "Data",
+   "label": "B17-BUYER_ADDRESS_LINE5",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e16\u0e19\u0e19",
+   "fieldname": "b18_buyer_street_name",
+   "fieldtype": "Data",
+   "label": "B18-BUYER_STREET_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e15\u0e4d\u0e32\u0e1a\u0e25",
+   "fieldname": "b19_buyer_city_sub_div_id",
+   "fieldtype": "Data",
+   "label": "B19-BUYER_CITY_SUB_DIV_ID",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e15\u0e4d\u0e32\u0e1a\u0e25",
+   "fieldname": "b20_buyer_city_sub_div_name",
+   "fieldtype": "Data",
+   "label": "B20-BUYER_CITY_SUB_DIV_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2d\u0e4d\u0e32\u0e40\u0e20\u0e2d",
+   "fieldname": "b21_buyer_city_id",
+   "fieldtype": "Data",
+   "label": "B21-BUYER_CITY_ID",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e2d\u0e4d\u0e32\u0e40\u0e20\u0e2d",
+   "fieldname": "b22_buyer_city_name",
+   "fieldtype": "Data",
+   "label": "B22-BUYER_CITY_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14",
+   "fieldname": "b23_buyer_country_sub_div_id",
+   "fieldtype": "Data",
+   "label": "B23-BUYER_COUNTRY_SUB_DIV_ID",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14",
+   "fieldname": "b24_buyer_country_sub_div_name",
+   "fieldtype": "Data",
+   "label": "B24-BUYER_COUNTRY_SUB_DIV_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28",
+   "fieldname": "b25_buyer_country_id",
+   "fieldtype": "Data",
+   "label": "B25-BUYER_COUNTRY_ID",
+   "length": 3,
+   "max_height": "30px",
+   "reqd": 1
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1c\u0e39\u0e49\u0e23\u0e31\u0e1a",
+   "fieldname": "o01_ship_to_id",
+   "fieldtype": "Data",
+   "label": "O01-SHIP_TO_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e23\u0e31\u0e1a",
+   "fieldname": "o02_ship_to_name",
+   "fieldtype": "Data",
+   "label": "O02-SHIP_TO_NAME",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e1c\u0e39\u0e49\u0e40\u0e2a\u0e35\u0e22\u0e20\u0e32\u0e29\u0e35\u0e2d\u0e32\u0e01\u0e23",
+   "fieldname": "o03_ship_to_tax_id_type",
+   "fieldtype": "Data",
+   "label": "O03-SHIP_TO_TAX_ID_TYPE",
+   "length": 4,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e1b\u0e23\u0e30\u0e08\u0e4d\u0e32\u0e15\u0e31\u0e27\u0e1c\u0e39\u0e49\u0e40\u0e2a\u0e35\u0e22\u0e20\u0e32\u0e29\u0e35\u0e2d\u0e32\u0e01\u0e23",
+   "fieldname": "o04_ship_to_tax_id",
+   "fieldtype": "Data",
+   "label": "O04-SHIP_TO_TAX_ID",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48\u0e2a\u0e32\u0e02\u0e32",
+   "fieldname": "o05_ship_to_branch_id",
+   "fieldtype": "Data",
+   "label": "O05-SHIP_TO_BRANCH_ID",
+   "length": 5,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e1c\u0e39\u0e49\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d",
+   "fieldname": "o06_ship_to_contact_person_name",
+   "fieldtype": "Data",
+   "label": "O06-SHIP_TO_CONTACT_PERSON_NAME",
+   "length": 140,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e41\u0e1c\u0e19\u0e01",
+   "fieldname": "o07_ship_to_contact_department_name",
+   "fieldtype": "Data",
+   "label": "O07-SHIP_TO_CONTACT_DEPARTMENT_NAME",
+   "length": 140,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e35\u0e40\u0e21\u0e25\u0e4c",
+   "fieldname": "o08_ship_to_uriid",
+   "fieldtype": "Data",
+   "label": "O08-SHIP_TO_URIID",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e35\u0e40\u0e21\u0e25\u0e4c",
+   "fieldname": "o09_ship_to_phone_no",
+   "fieldtype": "Data",
+   "label": "O09-SHIP_TO_PHONE_NO",
+   "length": 35,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e44\u0e1b\u0e23\u0e29\u0e13\u0e35\u0e22\u0e4c",
+   "fieldname": "o10_ship_to_post_code",
+   "fieldtype": "Data",
+   "label": "O10-SHIP_TO_POST_CODE",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e2d\u0e32\u0e04\u0e32\u0e23",
+   "fieldname": "o11_ship_to_building_name",
+   "fieldtype": "Data",
+   "label": "O11-SHIP_TO_BUILDING_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1a\u0e49\u0e32\u0e19\u0e40\u0e25\u0e02\u0e17\u0e35\u0e48",
+   "fieldname": "o12_ship_to_building_no",
+   "fieldtype": "Data",
+   "label": "O12-SHIP_TO_BUILDING_NO",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e17\u0e35\u0e48\u0e2d\u0e22\u0e39\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e17\u0e35\u0e48 1",
+   "fieldname": "o13_ship_to_address_line1",
+   "fieldtype": "Data",
+   "label": "O13-SHIP_TO_ADDRESS_LINE1",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e17\u0e35\u0e48\u0e2d\u0e22\u0e39\u0e1a\u0e23\u0e23\u0e17\u0e31\u0e14\u0e17\u0e35\u0e48 2",
+   "fieldname": "o14_ship_to_address_line2",
+   "fieldtype": "Data",
+   "label": "O14-SHIP_TO_ADDRESS_LINE2",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0b\u0e2d\u0e22",
+   "fieldname": "o15_ship_to_address_line3",
+   "fieldtype": "Data",
+   "label": "O15-SHIP_TO_ADDRESS_LINE3",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e39\u0e48\u0e1a\u0e49\u0e32\u0e19",
+   "fieldname": "o16_ship_to_address_line4",
+   "fieldtype": "Data",
+   "label": "O16-SHIP_TO_ADDRESS_LINE4",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e39\u0e48\u0e17\u0e35\u0e48",
+   "fieldname": "o17_ship_to_address_line5",
+   "fieldtype": "Data",
+   "label": "O17-SHIP_TO_ADDRESS_LINE5",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e16\u0e19\u0e19",
+   "fieldname": "o18_ship_to_street_name",
+   "fieldtype": "Data",
+   "label": "O18-SHIP_TO_STREET_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e15\u0e4d\u0e32\u0e1a\u0e25",
+   "fieldname": "o19_ship_to_city_sub_div_id",
+   "fieldtype": "Data",
+   "label": "O19-SHIP_TO_CITY_SUB_DIV_ID",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e15\u0e4d\u0e32\u0e1a\u0e25",
+   "fieldname": "o20_ship_to_city_sub_div_name",
+   "fieldtype": "Data",
+   "label": "O20-SHIP_TO_CITY_SUB_DIV_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2d\u0e4d\u0e32\u0e40\u0e20\u0e2d",
+   "fieldname": "o21_ship_to_city_id",
+   "fieldtype": "Data",
+   "label": "O21-SHIP_TO_CITY_ID",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e2d\u0e4d\u0e32\u0e40\u0e20\u0e2d",
+   "fieldname": "o22_ship_to_city_name",
+   "fieldtype": "Data",
+   "label": "O22-SHIP_TO_CITY_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14",
+   "fieldname": "o23_ship_to_country_sub_div_id",
+   "fieldtype": "Data",
+   "label": "O23-SHIP_TO_COUNTRY_SUB_DIV_ID",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e0a\u0e37\u0e48\u0e2d\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14",
+   "fieldname": "o24_ship_to_country_sub_div_name",
+   "fieldtype": "Data",
+   "label": "O24-SHIP_TO_COUNTRY_SUB_DIV_NAME",
+   "length": 70,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28",
+   "fieldname": "o25_ship_to_country_id",
+   "fieldtype": "Data",
+   "label": "O25-SHIP_TO_COUNTRY_ID",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e4d\u0e32\u0e19\u0e27\u0e19\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "f01_line_total_count",
+   "fieldtype": "Int",
+   "label": "F01-LINE_TOTAL_COUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e27\u0e31\u0e19\u0e40\u0e27\u0e25\u0e32\u0e19\u0e31\u0e14\u0e2a\u0e48\u0e07\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32",
+   "fieldname": "f02_delivery_occur_dtm",
+   "fieldtype": "Datetime",
+   "label": "F02-DELIVERY_OCCUR_DTM",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e2a\u0e01\u0e38\u0e25\u0e40\u0e07\u0e34\u0e19\u0e15\u0e23\u0e32",
+   "fieldname": "f03_invoice_currency_code",
+   "fieldtype": "Data",
+   "label": "F03-INVOICE_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f04_tax_type_code1",
+   "fieldtype": "Select",
+   "label": "F04-TAX_TYPE_CODE1",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nVAT\nFRE"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f05_tax_cal_rate1",
+   "fieldtype": "Float",
+   "label": "F05-TAX_CAL_RATE1",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f06_basis_amount1",
+   "fieldtype": "Float",
+   "label": "F06-BASIS_AMOUNT1",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f07_basis_currency_code1",
+   "fieldtype": "Data",
+   "label": "F07-BASIS_CURRENCY_CODE1",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f08_tax_cal_amount1",
+   "fieldtype": "Float",
+   "label": "F08-TAX_CAL_AMOUNT1",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f09_tax_cal_currency_code1",
+   "fieldtype": "Data",
+   "label": "F09-TAX_CAL_CURRENCY_CODE1",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f10_tax_type_code2",
+   "fieldtype": "Select",
+   "label": "F10-TAX_TYPE_CODE2",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nVAT\nFRE"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f11_tax_cal_rate2",
+   "fieldtype": "Float",
+   "label": "F11-TAX_CAL_RATE2",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f12_basis_amount2",
+   "fieldtype": "Float",
+   "label": "F12-BASIS_AMOUNT2",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f13_basis_currency_code2",
+   "fieldtype": "Data",
+   "label": "F13-BASIS_CURRENCY_CODE2",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f14_tax_cal_amount2",
+   "fieldtype": "Float",
+   "label": "F14-TAX_CAL_AMOUNT2",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f15_tax_cal_currency_code2",
+   "fieldtype": "Data",
+   "label": "F15-TAX_CAL_CURRENCY_CODE2",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f16_tax_type_code3",
+   "fieldtype": "Select",
+   "label": "F16-TAX_TYPE_CODE3",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nVAT\nFRE"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f17_tax_cal_rate3",
+   "fieldtype": "Float",
+   "label": "F17-TAX_CAL_RATE3",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f18_basis_amount3",
+   "fieldtype": "Float",
+   "label": "F18-BASIS_AMOUNT3",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f19_basis_currency_code3",
+   "fieldtype": "Data",
+   "label": "F19-BASIS_CURRENCY_CODE3",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f20_tax_cal_amount3",
+   "fieldtype": "Float",
+   "label": "F20-TAX_CAL_AMOUNT3",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f21_tax_cal_currency_code3",
+   "fieldtype": "Data",
+   "label": "F21-TAX_CAL_CURRENCY_CODE3",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f22_tax_type_code4",
+   "fieldtype": "Select",
+   "label": "F22-TAX_TYPE_CODE4",
+   "length": 3,
+   "max_height": "30px",
+   "options": "\nVAT\nFRE"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35",
+   "fieldname": "f23_tax_cal_rate4",
+   "fieldtype": "Float",
+   "label": "F23-TAX_CAL_RATE4",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f24_basis_amount4",
+   "fieldtype": "Float",
+   "label": "F24-BASIS_AMOUNT4",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32/\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23 (\u0e44\u0e21\u0e48\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f25_basis_currency_code4",
+   "fieldtype": "Data",
+   "label": "F25-BASIS_CURRENCY_CODE4",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f26_tax_cal_amount4",
+   "fieldtype": "Float",
+   "label": "F26-TAX_CAL_AMOUNT4",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f27_tax_cal_currency_code4",
+   "fieldtype": "Data",
+   "label": "F27-TAX_CAL_CURRENCY_CODE4",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e15\u0e31\u0e27\u0e1a\u0e2d\u0e01\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "f28_allowance_charge_ind",
+   "fieldtype": "Data",
+   "label": "F28-ALLOWANCE_CHARGE_IND",
+   "length": 5,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "f29_allowance_actual_amount",
+   "fieldtype": "Float",
+   "label": "F29-ALLOWANCE_ACTUAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "f30_allowance_actual_currency_code",
+   "fieldtype": "Data",
+   "label": "F30-ALLOWANCE_ACTUAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e40\u0e2b\u0e15\u0e38\u0e1c\u0e25\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e34\u0e14\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "f31_allowance_reason_code",
+   "fieldtype": "Data",
+   "label": "F31-ALLOWANCE_REASON_CODE",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e2b\u0e15\u0e38\u0e1c\u0e25\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e34\u0e14\u0e2a\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "f32_allowance_reason",
+   "fieldtype": "Data",
+   "label": "F32-ALLOWANCE_REASON",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e2b\u0e31\u0e2a\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e2b\u0e23\u0e37\u0e2d\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21",
+   "fieldname": "f33_payment_type_code",
+   "fieldtype": "Data",
+   "label": "F33-PAYMENT_TYPE_CODE",
+   "length": 16,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e32\u0e22\u0e25\u0e30\u0e40\u0e2d\u0e35\u0e22\u0e14\u0e40\u0e07\u0e37\u0e48\u0e2d\u0e19\u0e44\u0e02\u0e01\u0e32\u0e23\u0e0a\u0e4d\u0e32\u0e23\u0e30\u0e40\u0e07\u0e34\u0e19",
+   "fieldname": "f34_payment_description",
+   "fieldtype": "Data",
+   "label": "F34-PAYMENT_DESCRIPTION",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e27\u0e31\u0e19\u0e04\u0e23\u0e1a\u0e01\u0e33\u0e2b\u0e19\u0e14\u0e0a\u0e4d\u0e32\u0e23\u0e30\u0e40\u0e07\u0e34\u0e19",
+   "fieldname": "f35_payment_due_dtm",
+   "fieldtype": "Datetime",
+   "label": "F35-PAYMENT_DUE_DTM",
+   "length": 19,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e27\u0e21\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e15\u0e32\u0e21\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e40\u0e14\u0e34\u0e21",
+   "fieldname": "f36_original_total_amount",
+   "fieldtype": "Float",
+   "label": "F36-ORIGINAL_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e27\u0e21\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e15\u0e32\u0e21\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e40\u0e14\u0e34\u0e21",
+   "fieldname": "f37_original_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F37-ORIGINAL_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e27\u0e21\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e15\u0e32\u0e21\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23/\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e16\u0e39\u0e01\u0e15\u0e49\u0e2d\u0e07",
+   "fieldname": "f38_line_total_amount",
+   "fieldtype": "Float",
+   "label": "F38-LINE_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e23\u0e27\u0e21\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e15\u0e32\u0e21\u0e23\u0e32\u0e22\u0e01\u0e32\u0e23/\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e16\u0e39\u0e01\u0e15\u0e49\u0e2d\u0e07",
+   "fieldname": "f39_line_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F39-LINE_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e1c\u0e25\u0e15\u0e48\u0e32\u0e07",
+   "fieldname": "f40_adjusted_information_amount",
+   "fieldtype": "Float",
+   "label": "F40-ADJUSTED_INFORMATION_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e1c\u0e25\u0e15\u0e48\u0e32\u0e07",
+   "fieldname": "f41_adjusted_information_currency_code",
+   "fieldtype": "Data",
+   "label": "F41-ADJUSTED_INFORMATION_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
+   "fieldname": "f42_allowance_total_amount",
+   "fieldtype": "Float",
+   "label": "F42-ALLOWANCE_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2a\u0e48\u0e27\u0e19\u0e25\u0e14\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
+   "fieldname": "f43_allowance_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F43-ALLOWANCE_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
+   "fieldname": "f44_charge_total_amount",
+   "fieldtype": "Float",
+   "label": "F44-CHARGE_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e04\u0e48\u0e32\u0e18\u0e23\u0e23\u0e21\u0e40\u0e19\u0e35\u0e22\u0e21\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
+   "fieldname": "f45_charge_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F45-CHARGE_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e19\u0e4d\u0e32\u0e21\u0e32\u0e04\u0e34\u0e14\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f46_tax_basis_total_amount",
+   "fieldtype": "Float",
+   "label": "F46-TAX_BASIS_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e19\u0e4d\u0e32\u0e21\u0e32\u0e04\u0e34\u0e14\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f47_tax_basis_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F47-TAX_BASIS_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f48_tax_total_amount",
+   "fieldtype": "Float",
+   "label": "F48-TAX_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21",
+   "fieldname": "f49_tax_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F49-TAX_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e23\u0e27\u0e21 (\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f50_grand_total_amount",
+   "fieldtype": "Float",
+   "label": "F50-GRAND_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e23\u0e27\u0e21 (\u0e23\u0e27\u0e21\u0e20\u0e32\u0e29\u0e35\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e40\u0e1e\u0e34\u0e48\u0e21)",
+   "fieldname": "f51_grand_total_currency_code",
+   "fieldtype": "Data",
+   "label": "F51-GRAND_TOTAL_CURRENCY_CODE",
+   "length": 3,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e40\u0e07\u0e37\u0e48\u0e2d\u0e19\u0e44\u0e02\u0e01\u0e32\u0e23\u0e0a\u0e4d\u0e32\u0e23\u0e30\u0e40\u0e07\u0e34\u0e19 (\u0e27\u0e31\u0e19)",
+   "fieldname": "f52_term_payment",
+   "fieldtype": "Data",
+   "label": "F52-TERM_PAYMENT",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e41\u0e1a\u0e1a\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49\u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f53_withholdingtax_type1",
+   "fieldtype": "Data",
+   "label": "F53-WITHHOLDINGTAX_TYPE1",
+   "length": 20,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49",
+   "fieldname": "f54_withholdingtax_description1",
+   "fieldtype": "Data",
+   "label": "F54-WITHHOLDINGTAX_DESCRIPTION1",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49\u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f55_withholdingtax_rate1",
+   "fieldtype": "Float",
+   "label": "F55-WITHHOLDINGTAX_RATE1",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e48\u0e19\u0e33\u0e21\u0e32\u0e04\u0e34\u0e14\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f56_withholdingtax_basis_amount1",
+   "fieldtype": "Float",
+   "label": "F56-WITHHOLDINGTAX_BASIS_AMOUNT1",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f57_withholdingtax_tax_amount1",
+   "fieldtype": "Float",
+   "label": "F57-WITHHOLDINGTAX_TAX_AMOUNT1",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e41\u0e1a\u0e1a\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49\u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f58_withholdingtax_type2",
+   "fieldtype": "Data",
+   "label": "F58-WITHHOLDINGTAX_TYPE2",
+   "length": 20,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49",
+   "fieldname": "f59_withholdingtax_description2",
+   "fieldtype": "Data",
+   "label": "F59-WITHHOLDINGTAX_DESCRIPTION2",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f60_withholdingtax_rate2",
+   "fieldtype": "Float",
+   "label": "F60-WITHHOLDINGTAX_RATE2",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e19\u0e33\u0e21\u0e32\u0e04\u0e34\u0e14\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f61_withholdingtax_basis_amount2",
+   "fieldtype": "Float",
+   "label": "F61-WITHHOLDINGTAX_BASIS_AMOUNT2",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f62_withholdingtax_tax_amount2",
+   "fieldtype": "Float",
+   "label": "F62-WITHHOLDINGTAX_TAX_AMOUNT2",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e41\u0e1a\u0e1a\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49\u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f63_withholdingtax_type3",
+   "fieldtype": "Data",
+   "label": "F63-WITHHOLDINGTAX_TYPE3",
+   "length": 20,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e1b\u0e23\u0e30\u0e40\u0e20\u0e17\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49",
+   "fieldname": "f64_withholdingtax_description3",
+   "fieldtype": "Data",
+   "label": "F64-WITHHOLDINGTAX_DESCRIPTION3",
+   "length": 256,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2d\u0e31\u0e15\u0e23\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f65_withholdingtax_rate3",
+   "fieldtype": "Float",
+   "label": "F65-WITHHOLDINGTAX_RATE3",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e17\u0e35\u0e19\u0e33\u0e21\u0e32\u0e04\u0e34\u0e14\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f66_withholdingtax_basis_amount3",
+   "fieldtype": "Float",
+   "label": "F66-WITHHOLDINGTAX_BASIS_AMOUNT3",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49 \u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22",
+   "fieldname": "f67_withholdingtax_tax_amount3",
+   "fieldtype": "Float",
+   "label": "F67-WITHHOLDINGTAX_TAX_AMOUNT3",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e21\u0e39\u0e25\u0e04\u0e48\u0e32\u0e20\u0e32\u0e29\u0e35\u0e40\u0e07\u0e34\u0e19\u0e44\u0e14\u0e49\u0e2b\u0e31\u0e01 \u0e13 \u0e17\u0e35\u0e48\u0e08\u0e48\u0e32\u0e22\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
+   "fieldname": "f68_withholdingtax_total_amount",
+   "fieldtype": "Float",
+   "label": "F68-WITHHOLDINGTAX_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e40\u0e07\u0e34\u0e19\u0e17\u0e35\u0e48\u0e44\u0e14\u0e49\u0e23\u0e31\u0e1a\u0e08\u0e23\u0e34\u0e07",
+   "fieldname": "f69_actual_payment_total_amount",
+   "fieldtype": "Float",
+   "label": "F69-ACTUAL_PAYMENT_TOTAL_AMOUNT",
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 1",
+   "fieldname": "f70_document_remark1",
+   "fieldtype": "Data",
+   "label": "F70-DOCUMENT_REMARK1",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 2",
+   "fieldname": "f71_document_remark2",
+   "fieldtype": "Data",
+   "label": "F71-DOCUMENT_REMARK2",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 3",
+   "fieldname": "f72_document_remark3",
+   "fieldtype": "Data",
+   "label": "F72-DOCUMENT_REMARK3",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 4",
+   "fieldname": "f73_document_remark4",
+   "fieldtype": "Data",
+   "label": "F73-DOCUMENT_REMARK4",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 5",
+   "fieldname": "f74_document_remark5",
+   "fieldtype": "Data",
+   "label": "F74-DOCUMENT_REMARK5",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 6",
+   "fieldname": "f75_document_remark6",
+   "fieldtype": "Data",
+   "label": "F75-DOCUMENT_REMARK6",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 7",
+   "fieldname": "f76_document_remark7",
+   "fieldtype": "Data",
+   "label": "F76-DOCUMENT_REMARK7",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 8",
+   "fieldname": "f77_document_remark8",
+   "fieldtype": "Data",
+   "label": "F77-DOCUMENT_REMARK8",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 9",
+   "fieldname": "f78_document_remark9",
+   "fieldtype": "Data",
+   "label": "F78-DOCUMENT_REMARK9",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "description": "\u0e2b\u0e21\u0e32\u0e22\u0e40\u0e2b\u0e15\u0e38\u0e17\u0e49\u0e32\u0e22\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 10",
+   "fieldname": "f79_document_remark10",
+   "fieldtype": "Data",
+   "label": "F79-DOCUMENT_REMARK10",
+   "length": 500,
+   "max_height": "30px"
+  },
+  {
+   "default": "1",
+   "description": "\u0e08\u0e33\u0e19\u0e27\u0e19\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
+   "fieldname": "t01_total_document_count",
+   "fieldtype": "Int",
+   "label": "T01-TOTAL_DOCUMENT_COUNT",
+   "max_height": "30px"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "max_height": "30px",
+   "no_copy": 1,
+   "options": "INET ETax Document",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "line_item_information",
+   "fieldtype": "Table",
+   "label": "LINE_ITEM_INFORMATION",
+   "options": "INET ETax Document Line"
+  },
+  {
+   "fieldname": "column_break_ng5yq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_n0c0m",
+   "fieldtype": "Tab Break",
+   "label": "Document Header"
+  },
+  {
+   "fieldname": "column_break_hguez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xlntf",
+   "fieldtype": "Tab Break",
+   "label": "Buyer Information"
+  },
+  {
+   "fieldname": "file_control_section",
+   "fieldtype": "Section Break",
+   "label": "File Control"
+  },
+  {
+   "fieldname": "section_break_2nbmy",
+   "fieldtype": "Tab Break",
+   "label": "Ship To Information"
+  },
+  {
+   "fieldname": "section_break_bu8cb",
+   "fieldtype": "Tab Break",
+   "label": "Document Footer"
+  },
+  {
+   "fieldname": "file_trailer_section",
+   "fieldtype": "Section Break",
+   "label": "File Trailer"
+  },
+  {
+   "fieldname": "section_break_81jyu",
+   "fieldtype": "Tab Break",
+   "label": "Line Items"
+  },
+  {
+   "fieldname": "column_break_vffau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "\nINV\nTIV\nRCT\nCDN\nDBN\nABB"
+  },
+  {
+   "fieldname": "server_response_tab",
+   "fieldtype": "Tab Break",
+   "label": "Server Response"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Draft\nSuccess\nError\nProcessing",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_code",
+   "fieldtype": "Data",
+   "label": "Transaction Code",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Text",
+   "label": "Error Message",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_code",
+   "fieldtype": "Data",
+   "label": "Error Code",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "xml_url",
+   "fieldtype": "Data",
+   "label": "XML URL",
+   "length": 500,
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pdf_url",
+   "fieldtype": "Data",
+   "label": "PDF URL",
+   "length": 500,
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wzezw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dwxaw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "\nTHB\nEUR\nUSD\nCNY\nJPY"
+  },
+  {
+   "fieldname": "column_break_0vtff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_type_1_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Type 1"
+  },
+  {
+   "fieldname": "tax_type_2_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Type 2"
+  },
+  {
+   "fieldname": "tax_type_3_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Type 3"
+  },
+  {
+   "fieldname": "tax_type_4_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Type 4"
+  },
+  {
+   "fieldname": "allowance_and_charge_section",
+   "fieldtype": "Section Break",
+   "label": "Allowance"
+  },
+  {
+   "fieldname": "overall_tax_section",
+   "fieldtype": "Section Break",
+   "label": "Overall Tax"
+  },
+  {
+   "fieldname": "witholding_type_1_section",
+   "fieldtype": "Section Break",
+   "label": "Witholding Type 1"
+  },
+  {
+   "fieldname": "withholding_type_2_section",
+   "fieldtype": "Section Break",
+   "label": "Withholding Type 2"
+  },
+  {
+   "fieldname": "withholding_type_3",
+   "fieldtype": "Section Break",
+   "label": "Withholding Type 3"
+  },
+  {
+   "fieldname": "overall_withholding_section",
+   "fieldtype": "Section Break",
+   "label": "Overall Withholding"
+  },
+  {
+   "fieldname": "document_remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Document Remarks"
+  },
+  {
+   "fieldname": "column_break_gl2by",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iy0mb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_b5o6i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_57fz0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_48eny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vldtq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jbbhr",
+   "fieldtype": "Section Break",
+   "label": "Adjustment"
+  },
+  {
+   "fieldname": "column_break_zisjp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kh5v1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ezdbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kygyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zn8lf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lmfs8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ngort",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ypnpd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_llh3o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ckism",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mz4ri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ship_to_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Ship To Contact"
+  },
+  {
+   "fieldname": "column_break_pgm8z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ship_to_address_section",
+   "fieldtype": "Section Break",
+   "label": "Ship To Address"
+  },
+  {
+   "fieldname": "buyer_address_section",
+   "fieldtype": "Section Break",
+   "label": "Buyer Address"
+  },
+  {
+   "fieldname": "buyer_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Buyer Contact"
+  },
+  {
+   "fieldname": "column_break_zgy8t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_owbmn",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-02 18:19:10.851198",
+ "modified_by": "Administrator",
+ "module": "ETAX INET",
+ "name": "INET ETax Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Success"
+  },
+  {
+   "color": "Red",
+   "title": "Error"
+  },
+  {
+   "color": "Yellow",
+   "title": "Draft"
+  }
+ ],
+ "title_field": "h03_document_id"
+}
