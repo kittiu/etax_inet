@@ -1,6 +1,7 @@
 # Copyright (c) 2023, Kitti U. and contributors
 # For license information, please see license.txt
 import json
+import re
 import requests
 import frappe
 import base64
@@ -10,40 +11,24 @@ from frappe.model.document import Document
 
 class INETETaxDocument(Document):
 
-	def before_submit(self):
-		self.preset_data()  # setup similar data
-		# self.set_footer_by_tax_code()
-		self.submit_etax()
-	
-	def preset_data(self):
-		# Branch
-		self.h22_seller_branch_id = self.c02_seller_branch_id
-		# Line count
-		self.f01_line_total_count = len(self.line_item_information)
-		# Set currency code for footer and lines as in header
-		# --
-		# def update_cur_fields(doctype, docs, currency):
-		# 	for doc in docs:
-		# 		meta = frappe.get_meta(doctype)
-		# 		fields = filter(
-		# 			lambda l: l.fieldname.__contains__("currency_code"),
-		# 			meta.fields
-		# 		)
-		# 		d = {}
-		# 		for field in fields:
-		# 			d[field.fieldname] = currency
-		# 		doc.update(d)
-		# update_cur_fields(self.doctype, [self], self.currency)
-		# update_cur_fields(self.doctype + " Line", self.line_item_information, self.currency)
-		# --
+	def after_insert(self):
+		if self.auto_submit:
+			self.submit()
 
-	# def summarize_footer(self):
+	def on_submit(self):
+		self.post_to_inet()
+		self.attach_file()
 
-
-	def submit_etax(self):
+	def post_to_inet(self):
 		# Get inet etax setting
 		setting = frappe.get_single("INET ETax Settings")
-		url = setting.url_etax_sign_document_uat
+		url = False
+		if setting.mode == "Stop":
+			frappe.throw(_("ETax Server Mode = Stop"))
+		if setting.mode == "Test":
+			url = setting.url_etax_sign_document_uat
+		if setting.mode == "Production":
+			url = setting.url_etax_sign_document_prd
 	
 		# Get etax service object
 		services = frappe.get_list(
@@ -76,6 +61,7 @@ class INETETaxDocument(Document):
 			lambda l: l.fieldtype not in ("Tab Break", "Section Break", "Column Break", "Code")
 			and l.fieldname not in (
 				"document_type",
+				"pdf_content",
 				"line_item_information",
 				"server_response",
 				"transaction_code",
@@ -97,8 +83,11 @@ class INETETaxDocument(Document):
 			doc_content["LINE_ITEM_INFORMATION"].append(item)
 
 		# Get PDF
-		html = frappe.get_print(self.doctype, self.name, "Standard", None)
-		pdf_content = base64.b64encode(frappe.utils.pdf.get_pdf(html)).decode("utf-8")
+		# 1. Received from Odoo's, self.pdf_content may already has content
+		# 2. Use Frappe Print Format
+		if self.form_type == "frappe":
+			html = frappe.get_print(self.doctype, self.name, self.form_name, None)
+			self.pdf_content = base64.b64encode(frappe.utils.pdf.get_pdf(html)).decode("utf-8")
 
 		# Prepare json data
 		body = {
@@ -107,13 +96,18 @@ class INETETaxDocument(Document):
 			"APIKey": service.api_key,
 			"UserCode": service.user_code,
 			"AccessKey": service.access_key,
-			"ServiceCode": service.service_code,
-			"PDFContent": pdf_content,
+			"ServiceCode": "S02",  # No pdf
 			"TextContent": doc_content,
 		}
-
+		try:
+			if self.pdf_content:  # pdf_content is a non-existent field
+				body.update({"ServiceCode": "S06", "PDFContent": self.pdf_content})
+		except:
+			pass
+			
 		# Submit etax and keep the response
 		response = requests.post(url=url, headers=header, data=json.dumps(body)).json()
+
 		states = {
 			"OK": "Success",
 			"ER": "Error",
@@ -125,7 +119,27 @@ class INETETaxDocument(Document):
 		self.transaction_code = response.get("transactionCode")
 		self.xml_url = response.get("xmlURL")
 		self.pdf_url = response.get("pdfURL")
+		self.save()
 
+	def attach_file(self):
+		# Attached signed document
+		for url in [self.pdf_url, self.xml_url]:
+			if not url:
+				continue
+			response = requests.get(url)
+			fname = re.findall("filename=(.+)", response.headers["Content-Disposition"])[0]
+			fname = "%s_%s" % (self.h03_document_id, fname)
+			fname = fname.replace(" ", "").replace('"', '')
+			frappe.get_doc(
+				{
+					"doctype": "File",
+					"file_name": fname,
+					"attached_to_doctype": self.doctype,
+					"attached_to_name": self.name,
+					"is_private": 1,
+					"content": response.content,
+				}
+			).save()
 
 def get_field_value(doc, field):
 	if field.fieldtype == "Int":
@@ -136,3 +150,4 @@ def get_field_value(doc, field):
 		return doc.get(field.fieldname) and doc.get(field.fieldname).replace(" ", "T") or ""
 	else:
 		return doc.get(field.fieldname) or ""
+	

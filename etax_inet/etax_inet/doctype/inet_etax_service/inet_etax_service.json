@@ -15,8 +15,7 @@
   "authorization_code",
   "api_key",
   "user_code",
-  "access_key",
-  "service_code"
+  "access_key"
  ],
  "fields": [
   {
@@ -72,12 +71,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "service_code",
-   "fieldtype": "Data",
-   "label": "Service Code",
-   "reqd": 1
-  },
-  {
    "fieldname": "authorization_code",
    "fieldtype": "Data",
    "label": "Authorization Code",
@@ -91,7 +84,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-01 14:57:52.488628",
+ "modified": "2023-08-05 11:15:15.403000",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Service",

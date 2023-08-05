@@ -7,6 +7,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "mode",
+  "column_break_zgnvt",
   "url_etax_sign_document_uat",
   "url_etax_sign_document_prd"
  ],
@@ -24,12 +26,23 @@
    "in_list_view": 1,
    "label": "URL ETax Sign Document (PRD)",
    "reqd": 1
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "label": "Mode",
+   "options": "Stop\nTest\nProduction",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zgnvt",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-08-01 15:34:53.920259",
+ "modified": "2023-08-05 22:44:49.386268",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Settings",
