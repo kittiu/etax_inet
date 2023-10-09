@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{seller_tax_id}-{seller_branch_id}",
  "creation": "2023-08-01 14:52:31.065523",
  "default_view": "List",
  "doctype": "DocType",
@@ -31,8 +32,7 @@
    "in_list_view": 1,
    "label": "Seller Tax ID",
    "length": 13,
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "default": "00000",
@@ -41,8 +41,7 @@
    "in_list_view": 1,
    "label": "Seller Branch ID",
    "length": 5,
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "seller_service_user",
@@ -84,10 +83,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-05 11:15:15.403000",
+ "modified": "2023-10-09 13:59:12.704371",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Service",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
