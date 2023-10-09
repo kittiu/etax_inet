@@ -83,7 +83,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 13:59:12.704371",
+ "modified": "2023-10-09 21:02:42.796246",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Service",
@@ -103,6 +103,7 @@
    "write": 1
   }
  ],
+ "search_fields": "seller_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

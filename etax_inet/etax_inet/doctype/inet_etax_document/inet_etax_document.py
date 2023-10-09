@@ -16,6 +16,7 @@ class INETETaxDocument(Document):
 			self.submit()
 
 	def on_submit(self):
+		self.check_replacement()
 		self.post_to_inet()
 		self.attach_file()
 
@@ -140,6 +141,22 @@ class INETETaxDocument(Document):
 					"content": response.content,
 				}
 			).save()
+
+	def check_replacement(self):
+		# If this document is replacing a document, mark that document as replaced
+		if "TIVC" in self.h05_create_purpose_code:
+			filters = {
+				"h03_document_id": self.h07_additional_ref_assign_id,
+				"c01_seller_tax_id": self.c01_seller_tax_id,
+				"status": "Success",
+				"docstatus": 1
+			}
+			assign_doc = frappe.db.get_value("INET ETax Document", filters, "name")
+			if assign_doc:
+				doc = frappe.get_doc("INET ETax Document", assign_doc)
+				doc.status = "Replaced"
+				doc.save()
+
 
 def get_field_value(doc, field):
 	if field.fieldtype == "Int":
