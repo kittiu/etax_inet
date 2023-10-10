@@ -8,21 +8,24 @@ frappe.query_reports["INET ETax Report"] = {
 			fieldname: "report_type",
 			label: __("Report Type"),
 			fieldtype: "Select",
-			options: ["Document List", "By Document Type", "By Buyer"],
+			options: [
+				"Document List",
+				"Document List By Type",
+				"Document List By Buyer"
+			],
+			default: "Document List",
 		},
 		{
 			fieldname:"from_date",
 			label: __("From Date"),
 			fieldtype: "Date",
 			default: frappe.datetime.month_start(),
-			reqd: 1
 		},
 		{
 			fieldname:"to_date",
 			label: __("To Date"),
 			fieldtype: "Date",
 			default: frappe.datetime.get_today(),
-			reqd: 1
 		},
 		{
 			fieldname: "etax_service",
@@ -48,12 +51,6 @@ frappe.query_reports["INET ETax Report"] = {
 				]
 			}
 		}
-		// {
-		// 	fieldname: "month",
-		// 	label: __("Month"),
-		// 	fieldtype: "Select",
-		// 	options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-		// },
 	],
-
+	"initial_depth": 1
 };
