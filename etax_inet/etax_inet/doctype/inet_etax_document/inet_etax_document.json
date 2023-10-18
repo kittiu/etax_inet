@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "auto_submit",
+  "seller_service_user",
   "column_break_l2rfx",
   "form_type",
   "form_name",
@@ -1809,12 +1810,19 @@
    "fieldname": "form_name",
    "fieldtype": "Data",
    "label": "Form Name"
+  },
+  {
+   "default": "__user",
+   "fieldname": "seller_service_user",
+   "fieldtype": "Link",
+   "label": "Seller Service User",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-09 22:34:47.622708",
+ "modified": "2023-10-18 10:58:13.280068",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Document",

@@ -32,12 +32,14 @@ class INETETaxDocument(Document):
 			url = setting.url_etax_sign_document_prd
 	
 		# Get etax service object
+		if not self.seller_service_user:
+			self.seller_service_user = frappe.session.user
 		services = frappe.get_list(
 			"INET ETax Service",
 			filters={
 				"seller_tax_id": self.c01_seller_tax_id,
 				"seller_branch_id": self.c02_seller_branch_id,
-				"seller_service_user": frappe.session.user
+				"seller_service_user": self.seller_service_user
 			},
 			pluck="name"
 		)
@@ -160,9 +162,9 @@ class INETETaxDocument(Document):
 
 def get_field_value(doc, field):
 	if field.fieldtype == "Int":
-		return doc.get(field.fieldname) and str(doc.get(field.fieldname)) or ""
+		return doc.get(field.fieldname) and str(doc.get(field.fieldname)) or "0"
 	elif field.fieldtype == "Float":
-		return doc.get(field.fieldname) and "{:.2f}".format(doc.get(field.fieldname)) or ""				 
+		return doc.get(field.fieldname) and "{:.2f}".format(doc.get(field.fieldname)) or "0"				 
 	elif field.fieldtype == "Datetime":
 		return doc.get(field.fieldname) and doc.get(field.fieldname).replace(" ", "T") or ""
 	else:
