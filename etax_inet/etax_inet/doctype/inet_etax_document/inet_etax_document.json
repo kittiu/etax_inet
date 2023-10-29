@@ -1822,7 +1822,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-18 10:58:13.280068",
+ "modified": "2023-10-29 12:48:49.368450",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Document",
@@ -1862,6 +1862,10 @@
   {
    "color": "Orange",
    "title": "Replaced"
+  },
+  {
+   "color": "Gray",
+   "title": "Processing"
   }
  ],
  "title_field": "h03_document_id"

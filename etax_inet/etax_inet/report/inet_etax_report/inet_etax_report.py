@@ -3,6 +3,7 @@
 
 import frappe
 from frappe import _
+from frappe.query_builder import Case
 
 
 def execute(filters=None):
@@ -36,6 +37,12 @@ def get_columns():
 		{
 			"label": _("Document Number"),
 			"fieldname": "h03_document_id",
+			"fieldtype": "Data",
+			"width": 120,
+		},
+		{
+			"label": _("Reference"),
+			"fieldname": "h12_buyer_order_assign_id",
 			"fieldtype": "Data",
 			"width": 120,
 		},
@@ -125,6 +132,7 @@ def get_document_list_query(filters):
 	to_date = filters.get("to_date")
 	etax_service = filters.get("etax_service")	
 	document_types = filters.get("document_type")
+	cn_code = "81"
 
 	if not (from_date and to_date):
 		return False
@@ -137,14 +145,23 @@ def get_document_list_query(filters):
 			etax_doc.h02_document_name.as_("h02_document_name"),
 			etax_doc.h04_document_issue_dtm.as_("h04_document_issue_dtm"),
 			etax_doc.h03_document_id.as_("h03_document_id"),
+			etax_doc.h12_buyer_order_assign_id.as_("h12_buyer_order_assign_id"),
 			etax_doc.b04_buyer_tax_id.as_("b04_buyer_tax_id"),
 			etax_doc.b05_buyer_branch_id.as_("b05_buyer_branch_id"),
 			etax_doc.b02_buyer_name.as_("b02_buyer_name"),
-			etax_doc.f46_tax_basis_total_amount.as_("f46_tax_basis_total_amount"),
-			etax_doc.f48_tax_total_amount.as_("f48_tax_total_amount"),
-			etax_doc.f50_grand_total_amount.as_("f50_grand_total_amount")
+			Case()
+			.when(etax_doc.h01_document_type_code == cn_code, -etax_doc.f46_tax_basis_total_amount)
+			.else_(etax_doc.f46_tax_basis_total_amount)
+			.as_("f46_tax_basis_total_amount"),
+			Case()
+			.when(etax_doc.h01_document_type_code == cn_code, -etax_doc.f48_tax_total_amount)
+			.else_(etax_doc.f48_tax_total_amount)
+			.as_("f48_tax_total_amount"),
+			Case()
+			.when(etax_doc.h01_document_type_code == cn_code, -etax_doc.f50_grand_total_amount)
+			.else_(etax_doc.f46_tax_basis_total_amount)
+			.as_("f50_grand_total_amount"),
 		)
-		
 		.where(etax_doc.h04_document_issue_dtm >= filters.get("from_date"))
 		.where(etax_doc.h04_document_issue_dtm <= filters.get("to_date"))
 		.orderby(etax_doc.h04_document_issue_dtm)
