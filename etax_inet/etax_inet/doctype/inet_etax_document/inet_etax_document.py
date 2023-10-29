@@ -232,5 +232,10 @@ def run_update_processing_document() -> None:
 		filters={"status": "Processing"},
 		pluck="name",
 	)
-	for doc in docs:
-		frappe.get_doc("INET ETax Document", doc).update_processing_document()
+	for name in docs:
+		doc = frappe.get_doc("INET ETax Document", name)
+		try:
+			doc.update_processing_document()
+			frappe.db.commit()
+		except Exception as e:
+			doc.log_error(f"Error update processing document {doc.name}")
