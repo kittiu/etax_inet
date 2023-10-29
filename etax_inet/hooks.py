@@ -129,23 +129,11 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"etax_inet.tasks.all"
-#	],
-#	"daily": [
-#		"etax_inet.tasks.daily"
-#	],
-#	"hourly": [
-#		"etax_inet.tasks.hourly"
-#	],
-#	"weekly": [
-#		"etax_inet.tasks.weekly"
-#	],
-#	"monthly": [
-#		"etax_inet.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+	"all": [
+		"etax_inet.etax_inet.doctype.inet_etax_document.inet_etax_document.run_update_processing_document"
+	]
+}
 
 # Testing
 # -------

@@ -31,25 +31,7 @@ class INETETaxDocument(Document):
 		if setting.mode == "Production":
 			url = setting.url_etax_sign_document_prd
 	
-		# Get etax service object
-		if not self.seller_service_user:
-			self.seller_service_user = frappe.session.user
-		services = frappe.get_list(
-			"INET ETax Service",
-			filters={
-				"seller_tax_id": self.c01_seller_tax_id,
-				"seller_branch_id": self.c02_seller_branch_id,
-				"seller_service_user": self.seller_service_user
-			},
-			pluck="name"
-		)
-		if not services or len(services) > 1:
-			frappe.throw(_("The service user %s is not valid for seller %s (%s)") % (
-				frappe.session.user,
-				self.c01_seller_tax_id,
-				self.c02_seller_branch_id
-			))
-		service = frappe.get_doc("INET ETax Service", services[0])
+		service = self.inet_etax_service()
 
 		# Prepare header
 		header = {
@@ -159,6 +141,77 @@ class INETETaxDocument(Document):
 				doc.status = "Replaced"
 				doc.save()
 
+	def update_processing_document(self):
+		if self.status != "Processing":
+			return
+
+		# Get inet etax setting
+		setting = frappe.get_single("INET ETax Settings")
+		url = False
+		if setting.mode == "Stop":
+			frappe.throw(_("ETax Server Mode = Stop"))
+		if setting.mode == "Test":
+			url = setting.url_etax_get_document_status_uat
+		if setting.mode == "Production":
+			url = setting.url_etax_get_document_status_prd
+
+		service = self.inet_etax_service()
+
+		# Prepare header
+		header = {
+			"Content-Type": "application/json",
+			"Authorization": service.authorization_code
+		}
+
+		# Prepare json data
+		body = {
+			"SellerTaxId": service.seller_tax_id,
+			"SellerBranchId": service.seller_branch_id,
+			"APIKey": service.api_key,
+			"UserCode": service.user_code,
+			"AccessKey": service.access_key,
+			"ServiceCode": "S02",  # No pdf
+			"TransactionCode": self.transaction_code,
+		}
+
+		# Submit etax and keep the response
+		response = requests.post(url=url, headers=header, data=json.dumps(body)).json()
+		states = {
+			"OK": "Success",
+			"ER": "Error",
+			"PC": "Processing",
+		}
+		self.status = states[response.get("status")]
+		self.error_code = response.get("errorCode")
+		self.error_message = response.get("errorMessage")
+		self.xml_url = response.get("xmlURL")
+		self.pdf_url = response.get("pdfURL")
+		self.save()
+		# Finally, update attachment
+		self.attach_file()
+
+	def inet_etax_service(self):	
+		# Get etax service object
+		if not self.seller_service_user:
+			self.seller_service_user = frappe.session.user
+		services = frappe.get_list(
+			"INET ETax Service",
+			filters={
+				"seller_tax_id": self.c01_seller_tax_id,
+				"seller_branch_id": self.c02_seller_branch_id,
+				"seller_service_user": self.seller_service_user
+			},
+			pluck="name"
+		)
+		if not services or len(services) > 1:
+			frappe.throw(_("The service user %s is not valid for seller %s (%s)") % (
+				frappe.session.user,
+				self.c01_seller_tax_id,
+				self.c02_seller_branch_id
+			))
+		service = frappe.get_doc("INET ETax Service", services[0])
+		return service
+
 
 def get_field_value(doc, field):
 	if field.fieldtype == "Int":
@@ -169,4 +222,15 @@ def get_field_value(doc, field):
 		return doc.get(field.fieldname) and doc.get(field.fieldname).replace(" ", "T") or ""
 	else:
 		return doc.get(field.fieldname) or ""
-	
+
+def run_update_processing_document() -> None:
+	"""
+	Executed by background job
+	"""
+	docs = frappe.db.get_all(
+		"INET ETax Document",
+		filters={"status": "Processing"},
+		pluck="name",
+	)
+	for doc in docs:
+		frappe.get_doc("INET ETax Document", doc).update_processing_document()
