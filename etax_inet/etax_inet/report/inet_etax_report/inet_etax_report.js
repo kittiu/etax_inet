@@ -5,13 +5,28 @@
 frappe.query_reports["INET ETax Report"] = {
 	filters: [
 		{
+			fieldname: "status",
+			label: __("Status"),
+			fieldtype: "Select",
+			options: [
+				"",
+				"Draft",
+				"Success",
+				"Error",
+				"Processing",
+				"Replaced",
+			],
+			default: "Success",
+		},
+		{
 			fieldname: "report_type",
 			label: __("Report Type"),
 			fieldtype: "Select",
 			options: [
 				"Document List",
 				"Document List By Type",
-				"Document List By Buyer"
+				"Document List By Buyer",
+				"Document List By Status"
 			],
 			default: "Document List",
 		},
@@ -34,9 +49,9 @@ frappe.query_reports["INET ETax Report"] = {
 			options: "INET ETax Service",
 		},
 		{
-			"fieldname": "document_type",
-			"label": __("Document Type"),
-			"fieldtype": "MultiSelectList",
+			fieldname: "document_type",
+			label: __("Document Type"),
+			fieldtype: "MultiSelectList",
 			get_data: function(txt) {
 				return [
 					{"value": "380", "label": "380", "description": "ใบแจ้งหนี้"},
@@ -50,7 +65,27 @@ frappe.query_reports["INET ETax Report"] = {
 					{"value": "81", "label": "81", "description": "ใบลดหนี้"},
 				]
 			}
-		}
+		},
 	],
-	"initial_depth": 1
+	"initial_depth": 1,
+	"formatter": function (value, row, column, data, default_formatter) {
+		value = default_formatter(value, row, column, data);
+		if (column.fieldname == "status" && data && data.status == "Draft") {
+			value = "<span style='color:gray'>" + value + "</span>";
+		}
+		else if (column.fieldname == "status" && data && data.status == "Success") {
+			value = "<span style='color:green'>" + value + "</span>";
+		}
+		else if (column.fieldname == "status" && data && data.status == "Error") {
+			value = "<span style='color:red'>" + value + "</span>";
+		}
+		else if (column.fieldname == "status" && data && data.status == "Processing") {
+			value = "<span style='color:yellow'>" + value + "</span>";
+		}
+		else if (column.fieldname == "status" && data && data.status == "Replaced") {
+			value = "<span style='color:orange'>" + value + "</span>";
+		}
+
+		return value;
+	}
 };

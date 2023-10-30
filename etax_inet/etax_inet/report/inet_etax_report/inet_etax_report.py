@@ -23,6 +23,12 @@ def get_columns():
 			"width": 120,
 		},
 		{
+			"label": _("Status"),
+			"fieldname": "status",
+			"fieldtype": "Data",
+			"width": 0,
+		},
+		{
 			"label": _("Document Type"),
 			"fieldname": "h02_document_name",
 			"fieldtype": "Data",
@@ -108,6 +114,7 @@ def get_data(filters):
 	group_by_column = {
 		"Document List By Type": "h02_document_name",
 		"Document List By Buyer": "b02_buyer_name",
+		"Document List By Status": "status",
 	}
 	group_by = group_by_column.get(filters["report_type"])
 	if group_by:
@@ -128,9 +135,10 @@ def get_data(filters):
 
 
 def get_document_list_query(filters):
+	status = filters.get("status")	
 	from_date = filters.get("from_date")
 	to_date = filters.get("to_date")
-	etax_service = filters.get("etax_service")	
+	etax_service = filters.get("etax_service")
 	document_types = filters.get("document_type")
 	cn_code = "81"
 
@@ -142,6 +150,7 @@ def get_document_list_query(filters):
 		frappe.qb.from_(etax_doc)
 		.select(
 			etax_doc.name.as_("document_id"),
+			etax_doc.status.as_("status"),
 			etax_doc.h02_document_name.as_("h02_document_name"),
 			etax_doc.h04_document_issue_dtm.as_("h04_document_issue_dtm"),
 			etax_doc.h03_document_id.as_("h03_document_id"),
@@ -166,6 +175,8 @@ def get_document_list_query(filters):
 		.where(etax_doc.h04_document_issue_dtm <= filters.get("to_date"))
 		.orderby(etax_doc.h04_document_issue_dtm)
 	)
+	if status:
+		query = query.where(etax_doc.status == status)
 	if etax_service:
 		(tax_id, branch_id) = etax_service.split("-")
 		query = query.where(etax_doc.c01_seller_tax_id == tax_id)
