@@ -176,6 +176,13 @@ class INETETaxDocument(Document):
 
 		# Submit etax and keep the response
 		response = requests.post(url=url, headers=header, data=json.dumps(body)).json()
+		# If still processing or has error code ER004 (building XML), do not update yet
+		pending_codes = [
+			"ER004",  # ระบบอยู่ในระหว่างการประมวลผล ในขณะนี้กำลังอยู่ในขั้นตอนการสร้าง XML
+		]
+		if response.get("status") == "PC" or response.get("errorCode") in pending_codes:
+			return
+		# Else, update status oncee again
 		states = {
 			"OK": "Success",
 			"ER": "Error",
