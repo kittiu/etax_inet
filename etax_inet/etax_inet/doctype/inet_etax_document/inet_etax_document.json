@@ -1822,7 +1822,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-29 12:48:49.368450",
+ "modified": "2023-10-31 22:07:33.681244",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Document",
@@ -1840,6 +1840,18 @@
    "select": 1,
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ETax User",
+   "share": 1,
    "write": 1
   }
  ],

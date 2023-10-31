@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "Ecosoft Letter Head",
- "modified": "2023-10-10 21:17:53.201813",
+ "modified": "2023-10-31 22:07:58.242634",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Report",
@@ -22,6 +22,9 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "ETax User"
   }
  ]
 }
