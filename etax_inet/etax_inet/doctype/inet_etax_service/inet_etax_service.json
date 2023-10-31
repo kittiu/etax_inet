@@ -8,10 +8,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "seller_service_user",
+  "section_break_9sts7",
   "seller_name",
   "seller_tax_id",
   "seller_branch_id",
-  "seller_service_user",
   "column_break_y6jpa",
   "authorization_code",
   "api_key",
@@ -46,7 +47,7 @@
   {
    "fieldname": "seller_service_user",
    "fieldtype": "Link",
-   "label": "Seller Service User",
+   "label": "Service User",
    "options": "User",
    "reqd": 1
   },
@@ -79,11 +80,16 @@
   {
    "fieldname": "column_break_y6jpa",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9sts7",
+   "fieldtype": "Section Break",
+   "label": "INET ETax Seller Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 21:02:42.796246",
+ "modified": "2023-10-31 21:56:49.746372",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Service",
@@ -99,6 +105,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ETax Admin",
    "share": 1,
    "write": 1
   }
