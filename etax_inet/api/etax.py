@@ -143,9 +143,9 @@ def prepare_data(d, ft, fm, pdf):
                 # line.tax_ids
                 # and line.tax_ids[0].amount
                 # or 0.00,
-                "l22_line_basis_amount": l["line_base_amount"] or 0.00,  # line.tax_ids and line.price_subtotal or 0.00,
+                "l22_line_basis_amount": round(l["line_base_amount"], 2) or 0.00,  # line.tax_ids and line.price_subtotal or 0.00,
                 "l23_line_basis_currency_code": currency_code or "",
-                "l24_line_tax_cal_amount": l["line_tax_amount"] or 0.00,
+                "l24_line_tax_cal_amount": round(l["line_tax_amount"], 2) or 0.00,
                 # line.tax_ids
                 # and (line.price_total - line.price_subtotal)
                 # or 0.00,
@@ -155,11 +155,11 @@ def prepare_data(d, ft, fm, pdf):
                 "l28_line_allowance_actual_currency_code": currency_code or "",
                 "l29_line_allowance_reason_code": "",
                 "l30_line_allowance_reason": "",
-                "l31_line_tax_total_amount": l["line_tax_amount"] or 0.00,
+                "l31_line_tax_total_amount": round(l["line_tax_amount"], 2) or 0.00,
                 "l32_line_tax_total_currency_code": currency_code or "",
-                "l33_line_net_total_amount": l["line_base_amount"] or 0.00,
+                "l33_line_net_total_amount": round(l["line_base_amount"], 2) or 0.00,
                 "l34_line_net_total_currency_code": currency_code or "",
-                "l35_line_net_include_tax_total_amount": l["line_total_amount"] or 0.00,  # line.price_total,
+                "l35_line_net_include_tax_total_amount": round(l["line_total_amount"], 2) or 0.00,  # line.price_total,
                 "l36_line_net_include_tax_total_currency_code": currency_code or "",
                 "l37_product_remark1": "",
                 "l38_product_remark2": "",
@@ -202,10 +202,14 @@ def prepare_data(d, ft, fm, pdf):
         taxes[i] = {
             "tax_code": tax_group[0],
             "tax_rate": tax_group[1],
-            "base_amount": base_amount,
-            "tax_amount": tax_amount,
+            "base_amount": round(base_amount, 2),
+            "tax_amount": round(tax_amount, 2),
         }
-
+    # Fix pyhton decimal error
+    line_total = round(line_total, 2)
+    base_total = round(base_total, 2)
+    tax_total = round(tax_total, 2)
+    # --
     footer = {
         "f01_line_total_count": len(lines),
         "f02_delivery_occur_dtm": "",
@@ -247,11 +251,11 @@ def prepare_data(d, ft, fm, pdf):
         "f33_payment_type_code": "",
         "f34_payment_description": "",
         "f35_payment_due_dtm": "",
-        "f36_original_total_amount": d["original_amount_untaxed"] or 0.00,   # doc._get_additional_amount()[0],
+        "f36_original_total_amount": round(d["original_amount_untaxed"], 2) or 0.00,   # doc._get_additional_amount()[0],
         "f37_original_total_currency_code": currency_code or "",
-        "f38_line_total_amount": d["final_amount_untaxed"] or 0.00,   # doc._get_additional_amount()[2],
+        "f38_line_total_amount": round(d["final_amount_untaxed"], 2) or 0.00,   # doc._get_additional_amount()[2],
         "f39_line_total_currency_code": currency_code or "",
-        "f40_adjusted_information_amount": d["adjust_amount_untaxed"] or 0.00,   # doc._get_additional_amount()[2],
+        "f40_adjusted_information_amount": round(d["adjust_amount_untaxed"], 2) or 0.00,   # doc._get_additional_amount()[2],
         "f41_adjusted_information_currency_code": currency_code or "",
         "f42_allowance_total_amount": "",
         "f43_allowance_total_currency_code": currency_code or "",
