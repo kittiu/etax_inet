@@ -55,7 +55,11 @@ def prepare_data(d, ft, fm, pdf):
         "h19_seller_contact_uriid": "",
         "h20_seller_contact_phone_no": "",
         "h21_flex_field": "",
-        "h22_seller_branch_id": d["seller_branch_id"] or "00000",  # doc._get_branch_id() or doc.company_id.branch
+        "h22_seller_branch_id": (
+            "00000"
+            if not d["seller_branch_id"] or d["seller_branch_id"].lower() in ["head office", "สำนักงานใหญ่"]
+            else d["seller_branch_id"]
+        ),
         "h23_source_system": d["source_system"] or "",  # doc.env["ir.config_parameter"].sudo().get_param("web.base.url", "")
         "h24_encrypt_password": "",  # password for pdf encryption
         "h25_pdf_template_id": "",  # ???
@@ -76,13 +80,11 @@ def prepare_data(d, ft, fm, pdf):
         "b02_buyer_name": d["buyer_name"] or "",  # doc.partner_id.name
         "b03_buyer_tax_id_type": "TXID",
         "b04_buyer_tax_id": d["buyer_tax_id"] or "",  # doc.partner_id.vat
-        "b05_buyer_branch_id": d["buyer_branch_id"] or "",
-        # "00000"
-        # if (
-        #     not doc.company_id.branch
-        #     or doc.company_id.branch.lower() in ["head office", "สำนักงานใหญ่"]
-        # )
-        # else doc.company_id.branch or "",
+        "b05_buyer_branch_id": (
+            "00000"
+            if not d["buyer_branch_id"] or d["buyer_branch_id"].lower() in ["head office", "สำนักงานใหญ่"]
+            else d["buyer_branch_id"]
+        ),
         "b06_buyer_contact_person_name": "",
         "b07_buyer_contact_department_name": "",
         "b08_buyer_uriid": d["buyer_email"] or "",  # doc.partner_id.email
