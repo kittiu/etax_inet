@@ -5,7 +5,8 @@ from frappe import _
 
 @frappe.whitelist()
 def sign_etax_document(doc_data, form_type, form_name, pdf_content):
-    doc_data = json.loads(doc_data)
+    if isinstance(doc_data, str):
+        doc_data = json.loads(doc_data)
     data = prepare_data(doc_data, form_type, form_name, pdf_content)
     doc = frappe.new_doc("INET ETax Document")
     doc.update(data)
