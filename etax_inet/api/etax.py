@@ -79,8 +79,8 @@ def prepare_data(d, ft, fm, pdf):
     buyer = {
         "b01_buyer_id": "",
         "b02_buyer_name": d["buyer_name"] or "",  # doc.partner_id.name
-        "b03_buyer_tax_id_type": "TXID",
-        "b04_buyer_tax_id": d["buyer_tax_id"] or "",  # doc.partner_id.vat
+        "b03_buyer_tax_id_type": d["buyer_type"] or "TXID",  # TXID, NIDN, CCPT, OTHR
+        "b04_buyer_tax_id": d["buyer_tax_id"] or "N/A",  # doc.partner_id.vat
         "b05_buyer_branch_id": (
             "00000"
             if not d["buyer_branch_id"] or d["buyer_branch_id"].lower() in ["head office", "สำนักงานใหญ่"]
