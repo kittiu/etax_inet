@@ -59,6 +59,11 @@ app_license = "MIT"
 #	"methods": "etax_inet.utils.jinja_methods",
 #	"filters": "etax_inet.utils.jinja_filters"
 # }
+jinja = {
+	"methods": [
+		"etax_inet.utils.amount_in_bahttext",
+	],
+}
 
 # Installation
 # ------------
