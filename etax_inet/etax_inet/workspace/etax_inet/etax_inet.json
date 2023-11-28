@@ -1,0 +1,57 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"LGHsIFqIec\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">ETax INET</span>\",\"col\":12}},{\"id\":\"eIHVXahSJF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Inet Etax Document\",\"col\":3}},{\"id\":\"6IlABSQy6O\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"INET ETax Report\",\"col\":3}},{\"id\":\"UubcPf8LX5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"INET ETax Settings\",\"col\":3}},{\"id\":\"XnWGf55POr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"INET ETax Service\",\"col\":3}}]",
+ "creation": "2023-11-28 23:23:41.188360",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "file",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "ETax INET",
+ "links": [],
+ "modified": "2023-11-28 23:29:20.132953",
+ "modified_by": "Administrator",
+ "module": "ETAX INET",
+ "name": "ETax INET",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Inet Etax Document",
+   "link_to": "INET ETax Document",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "INET ETax Report",
+   "link_to": "INET ETax Report",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "INET ETax Settings",
+   "link_to": "INET ETax Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "INET ETax Service",
+   "link_to": "INET ETax Service",
+   "type": "DocType"
+  }
+ ],
+ "title": "ETax INET"
+}
