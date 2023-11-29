@@ -79,8 +79,8 @@ class INETETaxDocument(Document):
 			"SellerTaxId": service.seller_tax_id,
 			"SellerBranchId": service.seller_branch_id,
 			"APIKey": service.api_key,
-			"UserCode": service.user_code,
-			"AccessKey": service.access_key,
+			# "UserCode": service.user_code,
+			# "AccessKey": service.access_key,
 			"ServiceCode": "S02",  # No pdf
 			"TextContent": doc_content,
 		}
@@ -168,8 +168,8 @@ class INETETaxDocument(Document):
 			"SellerTaxId": service.seller_tax_id,
 			"SellerBranchId": service.seller_branch_id,
 			"APIKey": service.api_key,
-			"UserCode": service.user_code,
-			"AccessKey": service.access_key,
+			# "UserCode": service.user_code,
+			# "AccessKey": service.access_key,
 			"ServiceCode": "S02",  # No pdf
 			"TransactionCode": self.transaction_code,
 		}
