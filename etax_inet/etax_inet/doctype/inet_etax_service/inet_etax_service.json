@@ -61,14 +61,12 @@
   {
    "fieldname": "user_code",
    "fieldtype": "Data",
-   "label": "User Code",
-   "reqd": 1
+   "label": "User Code (Portal)"
   },
   {
    "fieldname": "access_key",
    "fieldtype": "Data",
-   "label": "Access Key",
-   "reqd": 1
+   "label": "Access Key (Portal)"
   },
   {
    "fieldname": "authorization_code",
@@ -89,7 +87,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-31 21:56:49.746372",
+ "modified": "2023-11-29 12:04:14.444536",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Service",

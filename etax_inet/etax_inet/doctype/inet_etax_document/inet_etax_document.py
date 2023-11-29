@@ -92,7 +92,6 @@ class INETETaxDocument(Document):
 			
 		# Submit etax and keep the response
 		response = requests.post(url=url, headers=header, data=json.dumps(body)).json()
-
 		states = {
 			"OK": "Success",
 			"ER": "Error",

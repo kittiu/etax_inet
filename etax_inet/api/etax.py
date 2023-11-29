@@ -113,7 +113,7 @@ def prepare_data(d, ft, fm, pdf):
         i += 1
         lines.append(
             {
-                "l01_line_id": i,
+                "l01_line_id": str(i),
                 "l02_product_id": l["product_code"] or "",
                 # line.product_id
                 # and line.product_id.default_code
