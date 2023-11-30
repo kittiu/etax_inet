@@ -73,22 +73,19 @@ def get_columns():
 		{
 			"label": _("Base Amount"),
 			"fieldname": "f46_tax_basis_total_amount",
-			"fieldtype": "Currency",
-			"options": "Company:company:default_currency",
+			"fieldtype": "Float",
 			"width": 0,
 		},
 		{
 			"label": _("Tax Amount"),
 			"fieldname": "f48_tax_total_amount",
-			"fieldtype": "Currency",
-			"options": "Company:company:default_currency",
+			"fieldtype": "Float",
 			"width": 0,
 		},
 		{
 			"label": _("Total Amount"),
 			"fieldname": "f50_grand_total_amount",
-			"fieldtype": "Currency",
-			"options": "Company:company:default_currency",
+			"fieldtype": "Float",
 			"width": 0,
 		}
 	]
