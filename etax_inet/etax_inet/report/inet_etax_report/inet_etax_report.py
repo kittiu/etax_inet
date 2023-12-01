@@ -137,6 +137,8 @@ def get_document_list_query(filters):
 	to_date = filters.get("to_date")
 	etax_service = filters.get("etax_service")
 	document_types = filters.get("document_type")
+	name = filters.get("name")
+	number = filters.get("number")
 	cn_code = "81"
 
 	if not (from_date and to_date):
@@ -180,6 +182,10 @@ def get_document_list_query(filters):
 		query = query.where(etax_doc.c02_seller_branch_id == branch_id)
 	if document_types:
 		query = query.where(etax_doc.h01_document_type_code.isin(document_types))
+	if name:
+		query = query.where(etax_doc.name == name)
+	if number:
+		query = query.where(etax_doc.h03_document_id == number)
 
 	return query
 

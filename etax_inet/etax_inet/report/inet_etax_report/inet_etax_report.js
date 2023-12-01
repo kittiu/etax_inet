@@ -66,6 +66,16 @@ frappe.query_reports["INET ETax Report"] = {
 				]
 			}
 		},
+		{
+			fieldname: "name",
+			label: __("Document ID"),
+			fieldtype: "Data",
+		},
+		{
+			fieldname: "number",
+			label: __("Document Number"),
+			fieldtype: "Data",
+		},
 	],
 	"initial_depth": 1,
 	"formatter": function (value, row, column, data, default_formatter) {
