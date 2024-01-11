@@ -29,7 +29,6 @@ def prepare_data(d, ft, fm, pdf):
     currency_code = d["currency_code"]  # doc.currenty_id.name
     data = {
         "auto_submit": 1,
-        "pdf_content": "",
         "form_type": ft,
         "form_name": fm,
         "pdf_content": pdf
