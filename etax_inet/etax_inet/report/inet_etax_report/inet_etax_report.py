@@ -167,7 +167,7 @@ def get_document_list_query(filters):
 			.as_("f48_tax_total_amount"),
 			Case()
 			.when(etax_doc.h01_document_type_code == cn_code, -etax_doc.f50_grand_total_amount)
-			.else_(etax_doc.f46_tax_basis_total_amount)
+			.else_(etax_doc.f50_grand_total_amount)
 			.as_("f50_grand_total_amount"),
 		)
 		.where(etax_doc.h04_document_issue_dtm >= filters.get("from_date"))
