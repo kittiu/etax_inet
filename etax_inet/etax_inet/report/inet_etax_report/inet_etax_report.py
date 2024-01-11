@@ -185,7 +185,7 @@ def get_document_list_query(filters):
 	if name:
 		query = query.where(etax_doc.name == name)
 	if number:
-		query = query.where(etax_doc.h03_document_id == number)
+		query = query.where(etax_doc.h03_document_id.like(f"%{number}%"))
 
 	return query
 
