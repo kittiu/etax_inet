@@ -1806,7 +1806,7 @@
    "fieldname": "form_type",
    "fieldtype": "Select",
    "label": "Form Type",
-   "options": "\nfrappe\nodoo\nevcs"
+   "options": "\nfrappe\nodoo\nevcs\nax"
   },
   {
    "fieldname": "form_name",
@@ -1824,7 +1824,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-28 23:21:40.494671",
+ "modified": "2024-01-12 21:14:06.570811",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Document",
