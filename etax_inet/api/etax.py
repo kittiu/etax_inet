@@ -267,7 +267,7 @@ def prepare_data(d, ft, fm, pdf):
         "f47_tax_basis_total_currency_code": currency_code or "",
         "f48_tax_total_amount": tax_total,
         "f49_tax_total_currency_code": currency_code or "",
-        "f50_grand_total_amount": line_total + tax_total,
+        "f50_grand_total_amount": round(line_total + tax_total, 2),
         "f51_grand_total_currency_code": currency_code or "",
         "f52_term_payment": "",
         "f53_withholdingtax_type1": "",
