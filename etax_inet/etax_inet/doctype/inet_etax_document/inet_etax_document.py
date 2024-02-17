@@ -45,13 +45,23 @@ class INETETaxDocument(Document):
 		head_fields = list(filter(
 			lambda l: l.fieldtype not in ("Tab Break", "Section Break", "Column Break", "Code")
 			and l.fieldname not in (
+				"auto_submit",
+				"seller_service_user",
+				"form_type",
+				"form_name",
 				"document_type",
 				"pdf_content",
 				"line_item_information",
 				"server_response",
+				"status",
 				"transaction_code",
+				"error_code",
 				"error_message",
-				"amended_from"),
+				"xml_url",
+				"pdf_url",
+				"amended_from",
+				"request_message",
+			),
 			head_meta.fields
 		))
 		line_fields = list(filter(
@@ -103,6 +113,7 @@ class INETETaxDocument(Document):
 		self.transaction_code = response.get("transactionCode")
 		self.xml_url = response.get("xmlURL")
 		self.pdf_url = response.get("pdfURL")
+		self.request_message = doc_content
 		self.save()
 
 	def attach_file(self):

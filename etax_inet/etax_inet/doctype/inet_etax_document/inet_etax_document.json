@@ -229,7 +229,8 @@
   "column_break_zgy8t",
   "pdf_url",
   "section_break_dwxaw",
-  "error_message"
+  "error_message",
+  "request_message"
  ],
  "fields": [
   {
@@ -1819,12 +1820,21 @@
    "fieldtype": "Link",
    "label": "Seller Service User",
    "options": "User"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.status=='Error'",
+   "fieldname": "request_message",
+   "fieldtype": "JSON",
+   "label": "Request Message",
+   "no_copy": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-12 21:14:06.570811",
+ "modified": "2024-02-17 14:34:30.051320",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Document",
