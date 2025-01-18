@@ -135,7 +135,7 @@ def prepare_data(d, ft, fm, pdf):
                 "l15_product_allowance_reason_code": "",
                 "l16_product_allowance_reason": "",
                 "l17_product_quantity": l["product_quantity"] or "",  # line.quantity
-                "l18_product_unit_code": "",  # ???
+                "l18_product_unit_code": l.get("product_unit_code") or "",  # line.product_unit_code
                 "l19_product_quantity_per_unit": "",
                 "l20_line_tax_type_code": l["line_tax_type_code"],
                 # line.tax_ids.name
