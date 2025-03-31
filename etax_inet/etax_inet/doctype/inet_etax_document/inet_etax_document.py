@@ -256,3 +256,9 @@ def run_update_processing_document() -> None:
 			frappe.db.commit()
 		except Exception as e:
 			doc.log_error(f"Error update processing document {doc.name}")
+
+
+def on_doctype_update():
+    frappe.db.add_index("INET ETax Document", ["status"])
+    frappe.db.add_index("INET ETax Document", ["h03_document_id"])
+    frappe.db.add_index("INET ETax Document", ["transaction_code"])
