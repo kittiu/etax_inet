@@ -81,6 +81,7 @@ class INETETaxDocument(Document):
 		# 1. Received from Odoo's, self.pdf_content may already has content
 		# 2. Use Frappe Print Format
 		if self.form_type == "frappe":
+			# get_print will commit the document by calling self.get_html(), self.update_context()
 			html = frappe.get_print(self.doctype, self.name, self.form_name, None)
 			self.pdf_content = base64.b64encode(frappe.utils.pdf.get_pdf(html)).decode("utf-8")
 
@@ -99,24 +100,35 @@ class INETETaxDocument(Document):
 				body.update({"ServiceCode": "S06", "PDFContent": self.pdf_content})
 		except:
 			pass
-			
-		# Submit etax and keep the response
-		response = requests.post(url=url, headers=header, data=json.dumps(body)).json()
-		states = {
-			"OK": "Success",
-			"ER": "Error",
-			"PC": "Processing",
-		}
-		self.status = states[response.get("status")]
-		self.error_code = response.get("errorCode")
-		self.error_message = response.get("errorMessage")
-		self.transaction_code = response.get("transactionCode")
-		self.xml_url = response.get("xmlURL")
-		self.pdf_url = response.get("pdfURL")
-		self.request_message = doc_content
-		self.save()
+
+		try:
+			# Submit etax and keep the response
+			response = requests.post(url=url, headers=header, data=json.dumps(body)).json()
+			states = {
+				"OK": "Success",
+				"ER": "Error",
+				"PC": "Processing",
+			}
+			self.status = states[response.get("status")]
+			self.error_code = response.get("errorCode")
+			self.error_message = response.get("errorMessage")
+			self.transaction_code = response.get("transactionCode")
+			self.xml_url = response.get("xmlURL")
+			self.pdf_url = response.get("pdfURL")
+			self.request_message = doc_content
+			self.save()
+		except Exception as e:
+			self.status = "Error"
+			self.error_message = str(e)
+			self.save()
+		frappe.db.commit()
 
 	def attach_file(self):
+     
+		setting = frappe.get_single("INET ETax Settings")
+		if not setting.keep_copy_of_signed_pdf:
+			return
+
 		# Attached signed document
 		for url in [self.pdf_url, self.xml_url]:
 			if not url:
@@ -135,6 +147,7 @@ class INETETaxDocument(Document):
 					"content": response.content,
 				}
 			).save()
+		frappe.db.commit()
 
 	def check_replacement(self):
 		# If this document is replacing a document, mark that document as replaced
@@ -226,7 +239,7 @@ class INETETaxDocument(Document):
 				self.c01_seller_tax_id,
 				self.c02_seller_branch_id
 			))
-		service = frappe.get_doc("INET ETax Service", services[0])
+		service = frappe.get_cached_doc("INET ETax Service", services[0])
 		return service
 
 

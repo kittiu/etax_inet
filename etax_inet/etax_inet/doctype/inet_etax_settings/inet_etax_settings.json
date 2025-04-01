@@ -8,6 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "mode",
+  "column_break_stwj",
+  "keep_copy_of_signed_pdf",
   "url_sign_document_section",
   "url_etax_sign_document_uat",
   "column_break_zgnvt",
@@ -68,12 +70,24 @@
   {
    "fieldname": "column_break_bzccb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_stwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "If checked, singed documents will be also be downloaded and saved as Files here.",
+   "fieldname": "keep_copy_of_signed_pdf",
+   "fieldtype": "Check",
+   "label": "Keep copy of signed pdf"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-10-31 22:06:44.361604",
+ "modified": "2025-04-01 20:34:20.464150",
  "modified_by": "Administrator",
  "module": "ETAX INET",
  "name": "INET ETax Settings",
