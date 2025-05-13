@@ -214,8 +214,8 @@ class INETETaxDocument(Document):
 		self.status = states[response.get("status")]
 		self.error_code = response.get("errorCode")
 		self.error_message = response.get("errorMessage")
-		self.xml_url = response.get("xmlURL")
-		self.pdf_url = response.get("pdfURL")
+		self.xml_url = response.get("urlXml")
+		self.pdf_url = response.get("urlPdf")
 		self.save()
 		# Finally, update attachment
 		self.attach_file()
