@@ -11,6 +11,7 @@ def sign_etax_document(doc_data, form_type, form_name, pdf_content):
     doc = frappe.new_doc("INET ETax Document")
     doc.update(data)
     res = doc.insert()
+    frappe.db.commit()
     return res
 
 ETAX_DOCTYPE = {
