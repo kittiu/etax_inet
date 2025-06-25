@@ -117,10 +117,12 @@ class INETETaxDocument(Document):
 			self.pdf_url = response.get("pdfURL")
 			self.request_message = doc_content
 			self.save()
+			self.reload()
 		except Exception as e:
 			self.status = "Error"
 			self.error_message = str(e)
 			self.save()
+			self.reload()
 		frappe.db.commit()
 
 	def attach_file(self):
@@ -217,6 +219,7 @@ class INETETaxDocument(Document):
 		self.xml_url = response.get("urlXml")
 		self.pdf_url = response.get("urlPdf")
 		self.save()
+		self.reload()
 		# Finally, update attachment
 		self.attach_file()
 
