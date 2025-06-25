@@ -14,6 +14,7 @@ class INETETaxDocument(Document):
 	def after_insert(self):
 		if self.auto_submit:
 			self.submit()
+			self.reload()
 
 	def on_submit(self):
 		self.check_replacement()
@@ -165,6 +166,7 @@ class INETETaxDocument(Document):
 				doc = frappe.get_doc("INET ETax Document", assign_doc)
 				doc.status = "Replaced"
 				doc.save()
+				doc.reload()
 
 	def update_processing_document(self):
 		if self.status != "Processing":
