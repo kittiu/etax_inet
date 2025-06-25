@@ -13,8 +13,8 @@ class INETETaxDocument(Document):
 
 	def after_insert(self):
 		if self.auto_submit:
-			self.submit()
 			self.reload()
+			self.submit()
 
 	def on_submit(self):
 		self.check_replacement()
@@ -118,12 +118,10 @@ class INETETaxDocument(Document):
 			self.pdf_url = response.get("pdfURL")
 			self.request_message = doc_content
 			self.save()
-			self.reload()
 		except Exception as e:
 			self.status = "Error"
 			self.error_message = str(e)
 			self.save()
-			self.reload()
 		frappe.db.commit()
 
 	def attach_file(self):
@@ -166,7 +164,6 @@ class INETETaxDocument(Document):
 				doc = frappe.get_doc("INET ETax Document", assign_doc)
 				doc.status = "Replaced"
 				doc.save()
-				doc.reload()
 
 	def update_processing_document(self):
 		if self.status != "Processing":
@@ -221,7 +218,6 @@ class INETETaxDocument(Document):
 		self.xml_url = response.get("urlXml")
 		self.pdf_url = response.get("urlPdf")
 		self.save()
-		self.reload()
 		# Finally, update attachment
 		self.attach_file()
 
@@ -254,7 +250,7 @@ def get_field_value(doc, field):
 	elif field.fieldtype == "Float":
 		return doc.get(field.fieldname) and "{:.2f}".format(doc.get(field.fieldname)) or "0"				 
 	elif field.fieldtype == "Datetime":
-		return doc.get(field.fieldname) and doc.get(field.fieldname).replace(" ", "T") or ""
+		return doc.get(field.fieldname) and doc.get(field.fieldname).strftime("%Y-%m-%d %H:%M:%S").replace(" ", "T") or ""
 	else:
 		return doc.get(field.fieldname) or ""
 
