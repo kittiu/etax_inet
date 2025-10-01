@@ -153,7 +153,7 @@ def prepare_data(d, ft, fm, pdf):
                 # or 0.00,
                 "l25_line_tax_cal_currency_code": currency_code or "",
                 "l26_line_allowance_charge_ind": "",
-                "l27_line_allowance_actual_amount": "",
+                "l27_line_allowance_actual_amount": round(l["line_allowance_actual_amount"], 2) or 0.00,
                 "l28_line_allowance_actual_currency_code": currency_code or "",
                 "l29_line_allowance_reason_code": "",
                 "l30_line_allowance_reason": "",
